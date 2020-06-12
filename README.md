@@ -8,4 +8,5 @@
 ### Technos/Librairies utilisés :
    - React
    - Axios
+   - Styled Component
   
