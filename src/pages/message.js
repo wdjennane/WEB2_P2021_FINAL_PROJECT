@@ -43,9 +43,9 @@ const Message = () => {
         <MessageFillRemainingSpace />
 
         <MessageButtonContainer>
-          {chips.map((data, i) => {
+          {chips.map((data, index) => {
             return (
-              <MessageButton key={i} path={data.path} text={data.message} />
+              <MessageButton key={index} path={data.path} text={data.message} />
             )
           })}
         </MessageButtonContainer>
