@@ -1,32 +1,15 @@
 import React from "react"
-import styled from "styled-components"
 import {
   MessageBubble,
   MessageButton,
   MessageHeader,
   MessageInput,
 } from "./../components/Message/Message"
-
-const Container = styled.main`
-  min-height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-`
-
-const FillRemainingSpace = styled.span`
-  flex: 1 1 auto;
-`
-
-const ChipsContainer = styled.ul`
-  width: 95%;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-`
+import {
+  Container,
+  FillRemainingSpace,
+  ButtonContainer,
+} from "./../components/Message/MessageStyle"
 
 const messages = [
   {
@@ -53,31 +36,19 @@ const Message = () => {
     <Container>
       <MessageHeader contactName="Céline" />
       {messages.map((data, i) => {
-        return (
-          <MessageBubble
-            key={i}
-            type={data.type}
-            text={data.message}
-          ></MessageBubble>
-        )
+        return <MessageBubble key={i} type={data.type} text={data.message} />
       })}
-      <FillRemainingSpace></FillRemainingSpace>
+      <FillRemainingSpace />
 
-      <ChipsContainer>
+      <ButtonContainer>
         {chips.map((data, i) => {
-          return (
-            <MessageButton
-              key={i}
-              path={data.path}
-              text={data.message}
-            ></MessageButton>
-          )
+          return <MessageButton key={i} path={data.path} text={data.message} />
         })}
-      </ChipsContainer>
+      </ButtonContainer>
       <MessageInput
         disabled={false}
         placeholder="Appuies sur les boutons pour répondre"
-      ></MessageInput>
+      />
     </Container>
   )
 }

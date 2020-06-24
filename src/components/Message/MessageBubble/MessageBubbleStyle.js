@@ -1,6 +1,4 @@
-import React from "react"
 import styled from "styled-components"
-import PropTypes from "prop-types"
 
 const MessageWrapper = styled.div`
   background: ${(props) => (props.type === "user" ? "#ecf0f1" : "#3FAABC")};
@@ -14,14 +12,4 @@ const MessageWrapper = styled.div`
   max-width: 70%;
 `
 
-const MessageBubble = (props) => {
-  const { text, type } = props
-  return <MessageWrapper type={type}>{text}</MessageWrapper>
-}
-
-MessageBubble.propTypes = {
-  text: PropTypes.string,
-  type: PropTypes.string,
-}
-
-export default MessageBubble
+export default MessageWrapper

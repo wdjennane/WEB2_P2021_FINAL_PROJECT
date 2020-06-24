@@ -1,6 +1,4 @@
-import React from "react"
 import styled from "styled-components"
-import PropTypes from "prop-types"
 
 const Container = styled.div`
   position: sticky;
@@ -32,18 +30,4 @@ const ProfileName = styled.p`
   color: black;
 `
 
-const MessageHeader = (props) => {
-  const { contactName } = props
-  return (
-    <Container>
-      <ProfilePicture>{contactName.charAt(0)}</ProfilePicture>
-      <ProfileName>{contactName}</ProfileName>
-    </Container>
-  )
-}
-
-MessageHeader.propTypes = {
-  contactName: PropTypes.string,
-}
-
-export default MessageHeader
+export { Container, ProfilePicture, ProfileName }
