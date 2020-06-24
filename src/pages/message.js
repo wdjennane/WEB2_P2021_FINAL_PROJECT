@@ -28,7 +28,7 @@ const messages = [
 const chips = [
   {
     path: "/les-dangers-du-web",
-    message: "Okay, compris !",
+    message: "Okay, compris !", 
   },
 ]
 
