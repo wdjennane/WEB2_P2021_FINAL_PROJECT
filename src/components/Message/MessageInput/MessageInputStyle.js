@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Container = styled.div`
+const MessageInputContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ const Container = styled.div`
   padding: 0.25rem;
 `
 
-const Input = styled.input`
+const MessageInput = styled.input`
   width: 70%;
   outline: none;
   border: none;
@@ -30,9 +30,9 @@ const Input = styled.input`
   }
 `
 
-const Icon = styled.img`
+const MessageIcon = styled.img`
   width: 28px;
   height: 28px;
 `
 
-export { Container, Input, Icon }
+export { MessageInputContainer, MessageInput, MessageIcon }

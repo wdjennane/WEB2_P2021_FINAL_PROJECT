@@ -3,12 +3,12 @@ import {
   MessageBubble,
   MessageButton,
   MessageHeader,
-  MessageInput,
+  MessageBar,
 } from "./../components/Message/Message"
 import {
-  Container,
-  FillRemainingSpace,
-  ButtonContainer,
+  MessageContainer,
+  MessageFillRemainingSpace,
+  MessageButtonContainer,
 } from "./../components/Message/MessageStyle"
 
 const messages = [
@@ -33,23 +33,23 @@ const chips = [
 
 const Message = () => {
   return (
-    <Container>
+    <MessageContainer>
       <MessageHeader contactName="Céline" />
       {messages.map((data, i) => {
         return <MessageBubble key={i} type={data.type} text={data.message} />
       })}
-      <FillRemainingSpace />
+      <MessageFillRemainingSpace />
 
-      <ButtonContainer>
+      <MessageButtonContainer>
         {chips.map((data, i) => {
           return <MessageButton key={i} path={data.path} text={data.message} />
         })}
-      </ButtonContainer>
-      <MessageInput
+      </MessageButtonContainer>
+      <MessageBar
         disabled={false}
         placeholder="Appuies sur les boutons pour répondre"
       />
-    </Container>
+    </MessageContainer>
   )
 }
 

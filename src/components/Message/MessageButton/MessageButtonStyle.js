@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
-const Chips = styled(Link)`
+const MessageChips = styled(Link)`
   width: auto;
   color: #777777;
   font-size: 0.875rem;
@@ -12,4 +12,4 @@ const Chips = styled(Link)`
   text-decoration: none;
 `
 
-export default Chips
+export default MessageChips

@@ -3,21 +3,29 @@ import PropTypes from "prop-types"
 import camera from "./../../../assets/icons/camera.svg"
 import mic from "./../../../assets/icons/mic.svg"
 
-import { Container, Input, Icon } from "./MessageInputStyle"
+import {
+  MessageInputContainer,
+  MessageInput,
+  MessageIcon,
+} from "./MessageInputStyle"
 
-const MessageInput = ({ placeholder, disabled }) => {
+const MessageBar = ({ placeholder, disabled }) => {
   return (
-    <Container disabled={disabled}>
-      <Icon src={camera}></Icon>
-      <Input type="text" placeholder={placeholder} disabled></Input>
-      <Icon src={mic}></Icon>
-    </Container>
+    <MessageInputContainer disabled={disabled}>
+      <MessageIcon src={camera} />
+      <MessageInput
+        type="text"
+        placeholder={placeholder}
+        disabled
+      ></MessageInput>
+      <MessageIcon src={mic} />
+    </MessageInputContainer>
   )
 }
 
-MessageInput.propTypes = {
+MessageBar.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
 }
 
-export default MessageInput
+export default MessageBar

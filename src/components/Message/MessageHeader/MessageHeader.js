@@ -1,13 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Container, ProfilePicture, ProfileName } from "./MessageHeaderStyle"
+import {
+  MessageHeaderContainer,
+  MessageProfilePicture,
+  MessageProfileName,
+} from "./MessageHeaderStyle"
 
 const MessageHeader = ({ contactName }) => {
   return (
-    <Container>
-      <ProfilePicture>{contactName.charAt(0)}</ProfilePicture>
-      <ProfileName>{contactName}</ProfileName>
-    </Container>
+    <MessageHeaderContainer>
+      <MessageProfilePicture>{contactName.charAt(0)}</MessageProfilePicture>
+      <MessageProfileName>{contactName}</MessageProfileName>
+    </MessageHeaderContainer>
   )
 }
 

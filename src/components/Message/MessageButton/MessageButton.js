@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Chips from "./MessageButtonStyle"
+import MessageChips from "./MessageButtonStyle"
 
 const MessageButton = ({ path, text, onClick }) => {
   return (
-    <Chips to={path} onClick={onClick}>
+    <MessageChips to={path} onClick={onClick}>
       {text}
-    </Chips>
+    </MessageChips>
   )
 }
 

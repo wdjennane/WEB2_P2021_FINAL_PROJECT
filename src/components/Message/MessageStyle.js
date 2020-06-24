@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Container = styled.main`
+const MessageContainer = styled.main`
   min-height: 100vh;
   display: flex;
   justify-content: flex-start;
@@ -8,11 +8,11 @@ const Container = styled.main`
   flex-direction: column;
 `
 
-const FillRemainingSpace = styled.span`
+const MessageFillRemainingSpace = styled.span`
   flex: 1 1 auto;
 `
 
-const ButtonContainer = styled.ul`
+const MessageButtonContainer = styled.ul`
   width: 95%;
   list-style-type: none;
   display: flex;
@@ -21,4 +21,4 @@ const ButtonContainer = styled.ul`
   flex-wrap: wrap;
 `
 
-export { Container, FillRemainingSpace, ButtonContainer }
+export { MessageContainer, MessageFillRemainingSpace, MessageButtonContainer }

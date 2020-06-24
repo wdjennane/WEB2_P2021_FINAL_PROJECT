@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Container = styled.div`
+const MessageHeaderContainer = styled.div`
   position: sticky;
   top: 0px;
   display: flex;
@@ -12,7 +12,7 @@ const Container = styled.div`
   padding: 0.5rem 1rem;
 `
 
-const ProfilePicture = styled.div`
+const MessageProfilePicture = styled.div`
   width: 36px;
   height: 36px;
   background: white;
@@ -25,9 +25,9 @@ const ProfilePicture = styled.div`
   margin-bottom: 6px;
 `
 
-const ProfileName = styled.p`
+const MessageProfileName = styled.p`
   font-size: 0.875rem;
   color: black;
 `
 
-export { Container, ProfilePicture, ProfileName }
+export { MessageHeaderContainer, MessageProfilePicture, MessageProfileName }
