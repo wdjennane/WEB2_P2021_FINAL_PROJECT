@@ -10,6 +10,7 @@ import {
   MessageFillRemainingSpace,
   MessageButtonContainer,
 } from "./../components/Message/MessageStyle"
+import Layout from "../components/Layout/Layout"
 
 const messages = [
   {
@@ -26,30 +27,34 @@ const messages = [
 
 const chips = [
   {
-    path: "/dangers-du-web",
+    path: "/les-dangers-du-web",
     message: "Okay, compris !",
   },
 ]
 
 const Message = () => {
   return (
-    <MessageContainer>
-      <MessageHeader contactName="Céline" />
-      {messages.map((data, i) => {
-        return <MessageBubble key={i} type={data.type} text={data.message} />
-      })}
-      <MessageFillRemainingSpace />
-
-      <MessageButtonContainer>
-        {chips.map((data, i) => {
-          return <MessageButton key={i} path={data.path} text={data.message} />
+    <Layout>
+      <MessageContainer>
+        <MessageHeader contactName="Céline" />
+        {messages.map((data, i) => {
+          return <MessageBubble key={i} type={data.type} text={data.message} />
         })}
-      </MessageButtonContainer>
-      <MessageBar
-        disabled={false}
-        placeholder="Appuies sur les boutons pour répondre"
-      />
-    </MessageContainer>
+        <MessageFillRemainingSpace />
+
+        <MessageButtonContainer>
+          {chips.map((data, i) => {
+            return (
+              <MessageButton key={i} path={data.path} text={data.message} />
+            )
+          })}
+        </MessageButtonContainer>
+        <MessageBar
+          disabled={false}
+          placeholder="Appuies sur les boutons pour répondre"
+        />
+      </MessageContainer>
+    </Layout>
   )
 }
 

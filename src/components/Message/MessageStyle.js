@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-const MessageContainer = styled.main`
-  min-height: 100vh;
+const MessageContainer = styled.div`
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
