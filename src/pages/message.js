@@ -37,17 +37,15 @@ const Message = () => {
     <Layout>
       <MessageContainer>
         <MessageHeader contactName="Céline" />
-        {messages.map((data, i) => {
-          return <MessageBubble key={i} type={data.type} text={data.message} />
-        })}
+        {messages.map((data, index) => (
+          <MessageBubble key={index} type={data.type} text={data.message} />
+        ))}
         <MessageFillRemainingSpace />
 
         <MessageButtonContainer>
-          {chips.map((data, index) => {
-            return (
-              <MessageButton key={index} path={data.path} text={data.message} />
-            )
-          })}
+          {chips.map((data, index) => (
+            <MessageButton key={index} path={data.path} text={data.message} />
+          ))}
         </MessageButtonContainer>
         <MessageBar
           disabled={false}
