@@ -6,6 +6,7 @@ const MessageContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  overflow-y: scroll;
 `
 
 const MessageFillRemainingSpace = styled.span`
