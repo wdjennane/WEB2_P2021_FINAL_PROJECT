@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import Colors from "./../../Colors/Colors"
 
 const MessageChips = styled(Link)`
   width: auto;
@@ -8,7 +9,7 @@ const MessageChips = styled(Link)`
   margin: 0.5rem;
   padding: 0.25rem 1rem;
   border-radius: 4px;
-  border: 1px solid #3faabc;
+  border: 1px solid ${Colors.Brand};
   text-decoration: none;
 `
 
