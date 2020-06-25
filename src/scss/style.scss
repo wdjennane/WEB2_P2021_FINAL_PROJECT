@@ -1,7 +1,12 @@
 @import "./helpers/reset";
 @import "./helpers/typography";
 
+
 html,
+body {
+  height: 100%;
+}
+
 body {
   height: 100%;
 }
