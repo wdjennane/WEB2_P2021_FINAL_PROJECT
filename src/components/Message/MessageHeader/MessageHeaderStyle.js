@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Colors from "./../../Colors/Colors"
 
 const MessageHeaderContainer = styled.div`
   position: sticky;
@@ -8,7 +9,7 @@ const MessageHeaderContainer = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background: #3faabc;
+  background: ${Colors.Brand};
   padding: 0.5rem 1rem;
 `
 
@@ -27,7 +28,8 @@ const MessageProfilePicture = styled.div`
 
 const MessageProfileName = styled.p`
   font-size: 0.875rem;
-  color: black;
+  color: white;
+  font-weight: 600;
 `
 
 export { MessageHeaderContainer, MessageProfilePicture, MessageProfileName }
