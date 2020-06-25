@@ -2,7 +2,8 @@ import styled from "styled-components"
 import Colors from "./../../Colors/Colors"
 
 const MessageWrapper = styled.div`
-  background: ${(props) => (props.type === "user" ? "#ecf0f1" : Colors.Brand)};
+  background: ${(props) =>
+    props.type === "user" ? Colors.MessageGray : Colors.Brand};
   margin: 0.5rem 1rem;
   padding: 1rem;
   border-radius: ${(props) =>
