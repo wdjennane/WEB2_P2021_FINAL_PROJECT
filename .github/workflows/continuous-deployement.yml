@@ -1,0 +1,34 @@
+name: Continuous Deployement
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy_production:
+    name: Deployement in production
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Copy repository contents via SCP
+        uses : appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          source: "."
+          target: "/var/www/WEB2_P2021_FINAL_PROJECT"
+
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+          script: |
+            npm install --production
+            npm run build
