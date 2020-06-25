@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Colors from "./../../Colors/Colors"
 
 const MessageBarContainer = styled.div`
   width: 100%;
@@ -9,7 +10,7 @@ const MessageBarContainer = styled.div`
   pointer-events: ${(props) => (props.disabled === false ? null : "none")};
   position: sticky;
   bottom: 0;
-  background: #e0f0f3;
+  background: ${Colors.BrandLight};
   padding: 0.25rem;
 `
 
@@ -26,7 +27,7 @@ const MessageBar = styled.input`
   text-align: center;
 
   ::placeholder {
-    color: #3faabc;
+    color: ${Colors.Brand};
   }
 `
 
