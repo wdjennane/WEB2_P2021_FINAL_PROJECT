@@ -11,7 +11,7 @@ import {
   MessageButtonContainer,
 } from "./../components/Message/MessageStyle"
 import Layout from "../components/Layout/Layout"
-import Card from "../components/Card/Card"
+// import Card from "../components/Card/Card"
 
 const messages = [
   {
@@ -36,12 +36,12 @@ const chips = [
 const Message = () => {
   return (
     <Layout>
-      <Card
-        selection={true}
+      {/* <Card
+        question={true}
         title="A ton avis ?"
         path="https://i.imgur.com/OeB3kxl.png"
         text="Est-il suffisant de supprimer son historique de recherche ?"
-      />
+      /> */}
 
       <MessageContainer>
         <MessageHeader contactName="Céline" />
