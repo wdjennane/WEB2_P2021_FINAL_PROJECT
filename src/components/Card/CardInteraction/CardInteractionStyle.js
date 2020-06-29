@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Colors from "./../../Colors/Colors.js"
 
 const CardInteractionContainer = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const CardInteractionButton = styled.span`
     height: 48px;
     width: 48px;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.3);
+    background: ${Colors.OpaqueWhite};
     margin: 0.5rem 0;
   }
 

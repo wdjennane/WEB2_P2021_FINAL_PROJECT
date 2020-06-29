@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Colors from "./../Colors/Colors.js"
 
 const CardContainer = styled.div`
   padding: 1rem;
@@ -9,7 +10,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   color: white;
-  background: rgba(255, 255, 255, 0.3);
+  background: ${Colors.OpaqueWhite};
   border-radius: 5px;
 `
 
