@@ -1,27 +1,14 @@
 import React from "react"
 import { Application } from "./ApplicationStyle"
-import styled from "styled-components"
+import { ApplicationContainer } from "./ApplicationComponentStyle"
 
-const ApplicationContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  span {
-    font-size: 0.625rem;
-    color: #777777;
-    max-width: 70px;
-    text-align: center;
-  }
-`
-
-const ApplicationComponent = (props) => {
+const ApplicationComponent = ({ color, image, name }) => {
   return (
     <ApplicationContainer>
-      <Application color={props.color}>
-        <img src={props.image} alt="" />
+      <Application color={color}>
+        <img src={image} alt="" />
       </Application>
-      <span>{props.name}</span>
+      <span>{name}</span>
     </ApplicationContainer>
   )
 }

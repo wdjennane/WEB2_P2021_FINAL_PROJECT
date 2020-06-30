@@ -1,5 +1,5 @@
 const Colors = {
-  Brand: "#3faabc",
+  Brand: "#48B4C7",
   BrandLight: "#9DE7F4",
   MessageGray: "#ecf0f1",
   LightGrey: "#777777",

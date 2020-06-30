@@ -18,7 +18,7 @@ export const Application = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.color};
+  background: ${Colors.Brand};
   border-radius: 5px;
   margin-bottom: 10px;
 `

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import Colors from "../Colors/Colors"
 
 const NavWrapper = styled.nav`
   margin-top: auto;
@@ -12,7 +13,7 @@ const NavHomeLink = styled(Link)`
   display: flex;
   align-items: center;
   font-size: 0.75rem;
-  color: #48b4c7;
+  color: ${Colors.Brand};
 
   svg {
     margin: 0 0.5rem 0 0;
