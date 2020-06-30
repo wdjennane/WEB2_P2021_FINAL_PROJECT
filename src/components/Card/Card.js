@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import {
   CardContainer,
   CardImg,
+  CardImgAnswer,
   CardSeparator,
   CardText,
   CardTitle,
@@ -16,7 +17,12 @@ const Card = ({ question, title, path, text }) => {
   return (
     <CardContainer question={question}>
       <CardTitle>{title}</CardTitle>
-      <CardImg src={path} />
+      {question === true ? (
+        <CardImg src={path} />
+      ) : (
+        // Ternary todo once the back is linked with the front
+        <CardImgAnswer src="" />
+      )}
       <CardSeparator />
       <CardText>{text}</CardText>
 
@@ -30,10 +36,10 @@ const Card = ({ question, title, path, text }) => {
 }
 
 Card.propTypes = {
-  title: PropTypes.string,
-  img: PropTypes.string,
-  text: PropTypes.string,
   question: PropTypes.bool,
+  title: PropTypes.string,
+  path: PropTypes.string,
+  text: PropTypes.string,
 }
 
 export default Card

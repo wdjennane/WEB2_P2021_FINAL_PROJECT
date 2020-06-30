@@ -1,20 +1,23 @@
 import styled from "styled-components"
-import Colors from "./../Colors/Colors.js"
 
 const CardContainer = styled.div`
-  padding: 1rem;
-  margin: 1rem;
-  height: 85%;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  color: white;
-  background: ${Colors.OpaqueWhite};
+  color: black;
+  background: #ffffff;
   border-radius: 5px;
+  box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25);
 `
 
 const CardImg = styled.img`
+  width: 100%;
+  height: auto;
+`
+
+const CardImgAnswer = styled.img`
   width: 100%;
   height: auto;
 `
@@ -38,4 +41,11 @@ const CardTitle = styled.h2`
   margin-bottom: 1rem;
 `
 
-export { CardContainer, CardImg, CardSeparator, CardText, CardTitle }
+export {
+  CardContainer,
+  CardImg,
+  CardImgAnswer,
+  CardSeparator,
+  CardText,
+  CardTitle,
+}
