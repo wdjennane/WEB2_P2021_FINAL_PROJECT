@@ -2,7 +2,6 @@ import React from "react"
 import {
   MessageBubble,
   MessageButton,
-  MessageHeader,
   MessageBar,
 } from "./../components/Message/Message"
 import {
@@ -34,9 +33,8 @@ const chips = [
 
 const Message = () => {
   return (
-    <Layout>
+    <Layout title="Céline">
       <MessageContainer>
-        <MessageHeader contactName="Céline" />
         {messages.map((data, index) => (
           <MessageBubble key={index} type={data.type} text={data.message} />
         ))}
