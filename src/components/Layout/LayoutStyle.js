@@ -7,7 +7,7 @@ const LayoutWrapper = styled.div`
 `
 
 const LayoutContainer = styled.div`
-  height: 100%;
+  height: calc(100% - 46px);
 `
 
 export { LayoutWrapper, LayoutContainer }
