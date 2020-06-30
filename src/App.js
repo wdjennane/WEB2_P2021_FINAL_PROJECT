@@ -10,6 +10,9 @@ import Message from "./pages/message"
 import Dictionary from "./pages/dictionary"
 import Settings from "./pages/settings"
 import LesDangersDuWeb from "./pages/les-dangers-du-web"
+import Phishing from "./pages/le-phishing"
+import TracesNumeriques from "./pages/les-traces-numériques"
+import RevengePorn from "./pages/le-revenge-porn"
 
 const App = () => {
   return (
@@ -20,6 +23,13 @@ const App = () => {
         <Route path="/dictionary" component={Dictionary} exact />
         <Route path="/settings" component={Settings} exact />
         <Route path="/les-dangers-du-web" component={LesDangersDuWeb} exact />
+        <Route
+          path="/les-traces-numeriques"
+          component={TracesNumeriques}
+          exact
+        />
+        <Route path="/le-phishing" component={Phishing} exact />
+        <Route path="/le-revenge-porn" component={RevengePorn} exact />
         <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
     </Router>
