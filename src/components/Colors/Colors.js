@@ -7,6 +7,7 @@ const Colors = {
   Alert: "#DB2424",
   Valid: "#6FCF97",
   Invalid: "#F99090",
+  DarkBlue: "#403F63",
 }
 
 export default Colors

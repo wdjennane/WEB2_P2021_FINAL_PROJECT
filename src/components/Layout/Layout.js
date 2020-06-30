@@ -15,14 +15,20 @@ const Layout = ({ children, title }) => {
 
   return (
     <LayoutWrapper>
-      <LayoutHeader>
-        {pathname === "/message" ? (
-          <MessageHeader contactName={title} />
-        ) : (
-          <LayoutTitle>{title}</LayoutTitle>
-        )}
-      </LayoutHeader>
-      <LayoutContainer>{children}</LayoutContainer>
+      {pathname !== "/" && (
+        <LayoutHeader>
+          {pathname === "/message" ? (
+            <MessageHeader contactName={title} />
+          ) : (
+            <LayoutTitle>{title}</LayoutTitle>
+          )}
+        </LayoutHeader>
+      )}
+      <LayoutContainer
+        style={{ height: pathname === "/" && "calc(100% - 46px)" }}
+      >
+        {children}
+      </LayoutContainer>
       <Nav />
     </LayoutWrapper>
   )

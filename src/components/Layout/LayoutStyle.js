@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Colors from "../Colors/Colors"
+import HomeBackground from "../../assets/images/home-background.svg"
 
 const LayoutWrapper = styled.div`
   height: 100%;
