@@ -8,12 +8,11 @@ const Applications = () => {
     <ApplicationContainer>
       <ApplicationComponent
         image={WebDangerIcon}
-        color={"#48B4C7"}
         name={"Introduction aux Dangers du web"}
       />
-      <ApplicationComponent color={"#48B4C7"} name={"Les Traces numériques"} />
-      <ApplicationComponent color={"#48B4C7"} name={"Le phishing"} />
-      <ApplicationComponent color={"#48B4C7"} name={"Revenge porn"} />
+      <ApplicationComponent name={"Les Traces numériques"} />
+      <ApplicationComponent name={"Le phishing"} />
+      <ApplicationComponent name={"Revenge porn"} />
     </ApplicationContainer>
   )
 }
