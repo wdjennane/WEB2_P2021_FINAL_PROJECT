@@ -21,8 +21,6 @@ const MessageBar = styled.input`
   padding: 4px;
   font-size: 11px;
   background: transparent;
-  /* border: 2px solid ${Colors.Brand}; */
-  /* border-radius: 5px; */
   margin: 0.5rem;
   text-align: center;
 
