@@ -14,11 +14,11 @@ const MessageFillRemainingSpace = styled.span`
 `
 
 const MessageButtonContainer = styled.ul`
-  width: 95%;
+  width: 100%;
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 `
 

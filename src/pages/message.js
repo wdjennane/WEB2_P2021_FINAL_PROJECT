@@ -15,19 +15,24 @@ const messages = [
   {
     type: "other",
     message:
-      "Bienvenue à “...” ! Je m’appelle Céline, je suis là pour t’informer en cas de problème durant le parcours.",
+      "Bienvenue sur l’app “Les dangers du web” ! Je m’appelle Céline, je suis là pour t’informer en cas de problème durant le parcours. ",
   },
   {
     type: "other",
     message:
-      "Bien, le concept de l’application est simple : Tu vas pacourir plusieurs thème qu’il te faudra débloquer pour t”informer sur les dangers du web",
+      "Le concept est simple 😄 : Tu pourras découvrir en introduction les Dangers du web de manière général puis tu vas pacourir plusieurs thèmes où tu seras confronté à des mises en situation, pour y répondre il te suffira de swiper à droite ou à gauche afin d’accèder à une information 😉️",
+  },
+  {
+    type: "other",
+    message:
+      "Tu pourras aussi découvir toutes les definitions dans la rubrique Dictionnaire 😄",
   },
 ]
 
 const chips = [
   {
     path: "/les-dangers-du-web",
-    message: "Okay, compris !",
+    message: "Oui, compris",
   },
 ]
 

@@ -9,7 +9,7 @@ const MessageInput = ({ placeholder, disabled }) => {
   return (
     <MessageBarContainer disabled={disabled}>
       <MessageIcon src={Camera} />
-      <MessageBar type="text" placeholder={placeholder} disabled></MessageBar>
+      <MessageBar type="text" placeholder={placeholder} disabled />
       <MessageIcon src={Mic} />
     </MessageBarContainer>
   )
