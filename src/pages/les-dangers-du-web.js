@@ -9,7 +9,7 @@ import {
   LesDangersDuWebItemImage,
   LesDangersDuWebImage,
 } from "../components/LesDangersDuWeb/LesDangersDuWebStyle"
-import { Text, Section, Button } from "../components/Commun/CommunStyle"
+import { Text, Section, Button } from "../components/Common/CommonStyle"
 import StepImage from "../assets/images/step.png"
 
 const LesDangersDuWeb = () => {
@@ -20,7 +20,7 @@ const LesDangersDuWeb = () => {
           <Text>
             Internet est un grand « <span>espace</span> » auquel tout le monde
             peut accéder et qui regorge d'informations, de jeux et de moyens de
-            communication, souvent utiles ou ludiques.
+            Commonication, souvent utiles ou ludiques.
           </Text>
           <Text>
             Internet présente aussi des dangers, aussi faut-il l'utiliser avec
