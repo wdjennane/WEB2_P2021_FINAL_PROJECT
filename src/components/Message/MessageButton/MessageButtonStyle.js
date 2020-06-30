@@ -4,12 +4,14 @@ import Colors from "./../../Colors/Colors"
 
 const MessageChips = styled(Link)`
   width: auto;
-  color: #777777;
+  color: white;
   font-size: 0.875rem;
-  margin: 0.5rem;
-  padding: 0.25rem 1rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  background: ${Colors.Brand};
+  color: white;
   border-radius: 4px;
-  border: 1px solid ${Colors.Brand};
+  box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25);
   text-decoration: none;
 `
 

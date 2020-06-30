@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 const CardControlsContainer = styled.div`
   display: flex;
-  justify-content: center;
-  width: 80%;
+  justify-content: flex-end;
+  width: 95%;
   align-items: center;
   font-size: 12px;
   font-weight: 600;
