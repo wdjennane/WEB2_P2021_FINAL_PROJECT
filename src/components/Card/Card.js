@@ -29,7 +29,7 @@ const Card = ({ question, title, path, text }) => {
       {question === true ? (
         <CardInteraction incorrect="" goBack="" correct="" />
       ) : (
-        <CardControls likes="" nextStep="" />
+        <CardControls nextStep="" />
       )}
     </CardContainer>
   )
