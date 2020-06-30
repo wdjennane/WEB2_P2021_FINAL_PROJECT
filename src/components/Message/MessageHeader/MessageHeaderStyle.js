@@ -3,6 +3,7 @@ import Colors from "./../../Colors/Colors"
 
 const MessageHeaderContainer = styled.div`
   position: sticky;
+  height: 100%;
   top: 0px;
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Colors from "../Colors/Colors"
 
 const LayoutWrapper = styled.div`
   height: 100%;
@@ -6,8 +7,22 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
 `
 
-const LayoutContainer = styled.div`
-  height: calc(100% - 46px);
+const LayoutHeader = styled.div`
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-export { LayoutWrapper, LayoutContainer }
+const LayoutTitle = styled.h3`
+  font-weight: bold;
+  color: ${Colors.Darkgrey};
+`
+
+const LayoutContainer = styled.div`
+  display: block;
+  height: calc(100% - 80px - 46px);
+  overflow-y: scroll;
+`
+
+export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }
