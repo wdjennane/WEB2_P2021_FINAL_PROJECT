@@ -1,6 +1,11 @@
 import styled from "styled-components"
 import Colors from "../Colors/Colors"
 
+import LesDangersDuWebImage1 from "../../assets/images/web-danger-01.svg"
+import LesDangersDuWebImage2 from "../../assets/images/web-danger-02.svg"
+import LesDangersDuWebImage3 from "../../assets/images/web-danger-03.svg"
+import LesDangersDuWebImage4 from "../../assets/images/web-danger-04.svg"
+
 const LesDangersDuWebVideo = styled.div`
   height: 150px;
   width: 100%;
@@ -42,4 +47,8 @@ export {
   LesDangersDuWebItem,
   LesDangersDuWebItemImage,
   LesDangersDuWebSuccessText,
+  LesDangersDuWebImage1,
+  LesDangersDuWebImage2,
+  LesDangersDuWebImage3,
+  LesDangersDuWebImage4,
 }

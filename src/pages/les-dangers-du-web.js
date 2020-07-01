@@ -7,12 +7,12 @@ import {
   LesDangersDuWebItem,
   LesDangersDuWebVideo,
   LesDangersDuWebItemImage,
+  LesDangersDuWebImage1,
+  LesDangersDuWebImage2,
+  LesDangersDuWebImage3,
+  LesDangersDuWebImage4,
 } from "../components/LesDangersDuWeb/LesDangersDuWebStyle"
 import { Text, Section, Button } from "../components/Common/CommonStyle"
-import StepImage1 from "../assets/images/web-danger-01.svg"
-import StepImage2 from "../assets/images/web-danger-02.svg"
-import StepImage3 from "../assets/images/web-danger-03.svg"
-import StepImage4 from "../assets/images/web-danger-04.svg"
 import WebDangerEnd from "../assets/images/web-danger-end.svg"
 import ReactPageScroller from "../../node_modules/react-page-scroller"
 
@@ -33,8 +33,8 @@ const LesDangersDuWeb = () => {
             </Text>
             <Text>
               <span>Sexting</span> ,<span> cyberpédophilie</span>,{" "}
-              <span>intimidationspan</span>, les dérives et les dangers
-              d’internet sont nombreux.
+              <span>intimidation</span>, les dérives et les dangers d’internet
+              sont nombreux.
             </Text>
           </DictionaryCard>
         </Section>
@@ -44,7 +44,7 @@ const LesDangersDuWeb = () => {
             headerTitle="Les pricipaux dangers du web"
             title="Cyber-harcèlement"
             stepNumber="01"
-            image={StepImage1}
+            image={LesDangersDuWebImage1}
           >
             <Text>
               Menaces, insultes, envoi de photos obscènes ou choquantes,
@@ -57,7 +57,7 @@ const LesDangersDuWeb = () => {
             headerTitle="Les pricipaux dangers du web"
             title="Cyberaddiction"
             stepNumber="02"
-            image={StepImage2}
+            image={LesDangersDuWebImage2}
           >
             <Text>
               Un <span>trouble psychologique</span> entraînant un besoin
@@ -71,7 +71,7 @@ const LesDangersDuWeb = () => {
             headerTitle="Les pricipaux dangers du web"
             title="Abus sexuel"
             stepNumber="03"
-            image={StepImage3}
+            image={LesDangersDuWebImage3}
           >
             Toute interaction sexuelle impliquant une / des personne(s) qui n’y{" "}
             <span>consent(ent) pas</span>
@@ -83,7 +83,7 @@ const LesDangersDuWeb = () => {
             headerTitle="Les pricipaux dangers du web"
             title="Vol d’identité numérique / coordonées bancaires"
             stepNumber="04"
-            image={StepImage4}
+            image={LesDangersDuWebImage4}
           >
             <Text>
               Le vol d’identité consiste à{" "}
@@ -149,7 +149,7 @@ const LesDangersDuWeb = () => {
             Parcours suivant
           </Button>
           <Button to="/" style={{ margin: "2rem auto 1rem" }}>
-            Reourner sur l'accueil
+            Retourner à l'accueil
           </Button>
         </Section>
       </ReactPageScroller>
