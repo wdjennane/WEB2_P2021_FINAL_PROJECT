@@ -145,11 +145,11 @@ const LesDangersDuWeb = () => {
             Tu as finis “<span>L’introduction aux dangers du web</span>” !
             Continues à t’informer en débloquant de nouveaux thèmes.
           </Text>
-          <Button to="/" style={{ margin: "2rem auto 1rem" }}>
+          <Button
+            to="/les-traces-numeriques"
+            style={{ margin: "2rem auto 1rem" }}
+          >
             Parcours suivant
-          </Button>
-          <Button to="/" style={{ margin: "2rem auto 1rem" }}>
-            Retourner à l'accueil
           </Button>
         </Section>
       </ReactPageScroller>
