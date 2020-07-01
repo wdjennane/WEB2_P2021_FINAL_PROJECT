@@ -1,5 +1,6 @@
 @import "./helpers/reset";
 @import "./helpers/typography";
+@import "./helpers/toast";
 
 html,
 body {
@@ -26,12 +27,4 @@ body {
 a {
   color: #000;
   text-decoration: none;
-}
-
-.Toastify__toast--default {
-  color: black;
-}
-
-.Toastify__progress-bar--default {
-  background: #48B4C7;
 }
