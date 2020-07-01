@@ -3,12 +3,17 @@ import PropsTypes from "prop-types"
 import {
   DictionaryCardWrapper,
   DictionaryCardTitle,
+  DictionaryTitleWrapper,
 } from "./DictionaryCardStyle"
+import { NavIconDictionary } from "./../Nav/NavIcons"
 
 const DictionaryCard = ({ children }) => {
   return (
     <DictionaryCardWrapper>
-      <DictionaryCardTitle>Définition</DictionaryCardTitle>
+      <DictionaryTitleWrapper>
+        <NavIconDictionary />
+        <DictionaryCardTitle>Définition</DictionaryCardTitle>
+      </DictionaryTitleWrapper>
       {children}
     </DictionaryCardWrapper>
   )

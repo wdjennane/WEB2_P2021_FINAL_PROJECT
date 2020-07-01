@@ -22,6 +22,9 @@ const Button = styled(Link)`
 const Section = styled.div`
   margin: 1rem;
   height: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export { Text, Section, Button }

@@ -3,7 +3,7 @@ import Colors from "../Colors/Colors"
 
 const DictionaryCardWrapper = styled.div`
   padding: 1rem;
-  box-shadow: 0 4px 35px rgba(146, 146, 146, 0.25);
+  transform: translateY(-42px);
 
   p:not(:last-child) {
     margin: 0 0 1rem 0;
@@ -14,6 +14,32 @@ const DictionaryCardTitle = styled.h3`
   color: ${Colors.Brand};
   text-align: center;
   margin: 0 0 0.5rem 0;
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(180deg, #48b4c7 0%, rgba(139, 7, 141, 0.62) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateX(-46px);
 `
 
-export { DictionaryCardWrapper, DictionaryCardTitle }
+const DictionaryCardIcon = styled.img`
+  width: 36px;
+  height: auto;
+`
+
+const DictionaryTitleWrapper = styled.span`
+  display: flex;
+  flex-direction: column;
+
+  svg {
+    transform: translateX(165px) translateY(10px);
+  }
+`
+
+export {
+  DictionaryCardWrapper,
+  DictionaryCardTitle,
+  DictionaryCardIcon,
+  DictionaryTitleWrapper,
+}

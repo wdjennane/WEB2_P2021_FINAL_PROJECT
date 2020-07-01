@@ -30,13 +30,6 @@ const LesDangersDuWebItemImage = styled.div`
   margin: 0 0 0.5rem 0;
 `
 
-const LesDangersDuWebImage = styled.div`
-  height: 150px;
-  width: 250px;
-  background-color: ${Colors.LightGrey};
-  margin: 0 auto 1rem;
-`
-
 const LesDangersDuWebSuccessText = styled.div`
   margin: 0 0 1rem;
   font-weight: bold;
@@ -49,5 +42,4 @@ export {
   LesDangersDuWebItem,
   LesDangersDuWebItemImage,
   LesDangersDuWebSuccessText,
-  LesDangersDuWebImage,
 }
