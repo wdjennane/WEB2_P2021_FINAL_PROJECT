@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import HomeBackground from "../../assets/images/home-background.svg"
-import Colors from "../Colors/Colors"
+import Colors from "../../assets/jsStyles/Colors"
 
 export const HomeContainer = styled.div`
   height: 100%;

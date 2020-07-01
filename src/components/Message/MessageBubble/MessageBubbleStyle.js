@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Colors from "./../../Colors/Colors"
+import Colors from "../../../assets/jsStyles/Colors"
 
 const MessageWrapper = styled.div`
   background: ${(props) =>
