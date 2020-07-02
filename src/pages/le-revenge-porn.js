@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import DictionaryCard from "../components/Dictionary/DictionaryCard"
-import { Text, Section } from "../components/Common/CommonStyle"
+import { Text, Section } from "../jsStyles/CommonStyle"
 
 const RevengePorn = () => {
   return (
