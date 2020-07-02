@@ -16,7 +16,7 @@ const LayoutHeader = styled.div`
 
 const LayoutTitle = styled.h3`
   font-weight: bold;
-  color: ${Colors.Darkgrey};
+  color: ${Colors.TextDark};
 `
 
 const LayoutContainer = styled.div`
@@ -25,4 +25,26 @@ const LayoutContainer = styled.div`
   overflow-y: scroll;
 `
 
-export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }
+const LayoutProgressWrapper = styled.div`
+  background-color: ${Colors.BrandLight};
+  height: 5px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+`
+
+const LayoutProgressStyle = styled.div`
+  height: 5px;
+  background-color: ${Colors.Brand};
+`
+
+export {
+  LayoutWrapper,
+  LayoutHeader,
+  LayoutTitle,
+  LayoutContainer,
+  LayoutProgressWrapper,
+  LayoutProgressStyle,
+}

@@ -11,15 +11,17 @@ const StepTitle = styled.h3`
   font-weight: bold;
   padding: 0 0 0 2rem;
   margin: 0 0 1rem;
-  color: ${Colors.Darkgrey};
+  color: ${Colors.Brand};
+  display: flex;
+  align-items: center;
 `
 
 const StepNumber = styled.span`
   position: absolute;
   left: 0;
-  font-size: 2rem;
-  transform: rotate(-90deg);
-  color: ${Colors.Brand};
+  font-size: 4rem;
+  color: ${Colors.TitleLight};
+  opacity: 0.35;
 `
 
 const StepImage = styled.img`
