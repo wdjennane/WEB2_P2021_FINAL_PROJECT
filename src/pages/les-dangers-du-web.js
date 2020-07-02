@@ -12,13 +12,13 @@ import {
   LesDangersDuWebImage3,
   LesDangersDuWebImage4,
 } from "../components/LesDangersDuWeb/LesDangersDuWebStyle"
-import { Text, Section, Button } from "../components/Common/CommonStyle"
+import { Text, Section, Button } from "../jsStyles/CommonStyle"
 import WebDangerEnd from "../assets/images/web-danger-end.svg"
 import ReactPageScroller from "../../node_modules/react-page-scroller"
 
 const LesDangersDuWeb = () => {
   return (
-    <Layout title="Les dangers du web">
+    <Layout title="Introduction">
       <ReactPageScroller>
         <Section>
           <DictionaryCard>

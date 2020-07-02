@@ -11,15 +11,11 @@ const DictionaryCardWrapper = styled.div`
 `
 
 const DictionaryCardTitle = styled.h3`
-  color: ${Colors.Brand};
+  color: ${Colors.TitleLight};
   text-align: center;
   margin: 0 0 0.5rem 0;
   font-size: 48px;
   font-weight: 900;
-  background: linear-gradient(180deg, #48b4c7 0%, rgba(139, 7, 141, 0.62) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   transform: translateX(-46px);
 `
 

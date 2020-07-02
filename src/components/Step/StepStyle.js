@@ -20,10 +20,7 @@ const StepNumber = styled.span`
   position: absolute;
   left: 0;
   font-size: 4rem;
-  background: linear-gradient(180deg, #48b4c7 0%, rgba(139, 7, 141, 0.62) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: ${Colors.TitleLight};
   opacity: 0.35;
 `
 

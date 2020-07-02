@@ -15,7 +15,7 @@ export const HomeContainer = styled.div`
   h1 {
     margin: 44px 0 27px 0;
     font-size: 1.125rem;
-    color: ${Colors.DarkBlue};
+    color: ${Colors.TextDark};
     font-weight: 600;
   }
 `

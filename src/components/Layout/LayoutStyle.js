@@ -16,7 +16,7 @@ const LayoutHeader = styled.div`
 
 const LayoutTitle = styled.h3`
   font-weight: bold;
-  color: ${Colors.Darkgrey};
+  color: ${Colors.TextDark};
 `
 
 const LayoutContainer = styled.div`
