@@ -7,7 +7,7 @@ import { CardControlsContainer, CardControlsButton } from "./CardControlsStyle"
 const CardControls = ({ nextStep }) => {
   return (
     <CardControlsContainer>
-      <CardControlsButton onClick={nextStep}>
+      <CardControlsButton to={nextStep}>
         <img src={Next} alt="" />
         <p>Suite</p>
       </CardControlsButton>

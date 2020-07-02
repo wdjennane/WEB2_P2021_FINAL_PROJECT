@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import {
   CardContainer,
   CardImg,
@@ -13,33 +12,59 @@ import {
 import CardInteraction from "./CardInteraction/CardInteraction"
 import CardControls from "./CardControls/CardControls"
 
-const Card = ({ question, title, path, text }) => {
+const Card = ({
+  isQuestion,
+  title,
+  image,
+  text,
+  incorrectPath,
+  goBack,
+  correctPath,
+}) => {
   return (
-    <CardContainer question={question}>
+    <CardContainer>
       <CardTitle>{title}</CardTitle>
-      {question === true ? (
-        <CardImg src={path} />
+
+      {isQuestion && <CardImg src={image} alt="card" />}
+
+      {/* {isQuestion ? (
+        <CardImg src={image} />
       ) : (
         // Ternary todo once the back is linked with the front
         <CardImgAnswer src="" />
-      )}
-      <CardSeparator />
-      <CardText>{text}</CardText>
+      )} */}
 
-      {question === true ? (
-        <CardInteraction incorrect="" goBack="" correct="" />
+      <CardSeparator />
+      {isQuestion ? (
+        <CardText>{text} </CardText>
       ) : (
-        <CardControls nextStep="" />
+        <CardText
+          dangerouslySetInnerHTML={{ __html: text }}
+          style={{ textAlign: "left" }}
+        />
+      )}
+
+      {isQuestion ? (
+        <CardInteraction
+          incorrectPath={incorrectPath}
+          goBack={goBack}
+          correctPath={correctPath}
+        />
+      ) : (
+        <CardControls nextStep={correctPath} />
       )}
     </CardContainer>
   )
 }
 
 Card.propTypes = {
-  question: PropTypes.bool,
+  isQuestion: PropTypes.bool,
   title: PropTypes.string,
-  path: PropTypes.string,
+  image: PropTypes.string,
   text: PropTypes.string,
+  incorrectPath: PropTypes.string,
+  goBack: PropTypes.string,
+  correctPath: PropTypes.string,
 }
 
 export default Card

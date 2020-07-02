@@ -9,20 +9,20 @@ import {
   CardInteractionButton,
 } from "./CardInteractionStyle"
 
-const CardInteraction = ({ incorrect, goBack, correct }) => {
+const CardInteraction = ({ incorrectPath, goBack, correctPath }) => {
   return (
     <CardInteractionContainer>
-      <CardInteractionButton onClick={incorrect}>
+      <CardInteractionButton to={incorrectPath}>
         <img src={Cross} alt="" />
         <p>Non</p>
       </CardInteractionButton>
 
-      <CardInteractionButton onClick={goBack}>
+      <CardInteractionButton to={goBack}>
         <img src={Back} alt="" />
         <p>Retour</p>
       </CardInteractionButton>
 
-      <CardInteractionButton onClick={correct}>
+      <CardInteractionButton to={correctPath}>
         <img src={Check} alt="" />
         <p>Oui</p>
       </CardInteractionButton>

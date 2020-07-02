@@ -10,9 +10,11 @@ import Message from "./pages/message"
 import Dictionary from "./pages/dictionary"
 import Settings from "./pages/settings"
 import LesDangersDuWeb from "./pages/les-dangers-du-web"
+import TracesNumeriques from "./pages/les-traces-numeriques"
 import Phishing from "./pages/le-phishing"
-import TracesNumeriques from "./pages/les-traces-numériques"
 import RevengePorn from "./pages/le-revenge-porn"
+import TracesNumeriquesQuestion from "./components/TracesNumeriques/TracesNumeriquesQuestion"
+import TracesNumeriquesIncorrect from "./components/TracesNumeriques/TracesNumeriquesIncorrect"
 
 const App = () => {
   return (
@@ -27,6 +29,14 @@ const App = () => {
           path="/les-traces-numeriques"
           component={TracesNumeriques}
           exact
+        />
+        <Route
+          path="/les-traces-numeriques/question/:id"
+          component={TracesNumeriquesQuestion}
+        />
+        <Route
+          path="/les-traces-numeriques/incorrect/:id"
+          component={TracesNumeriquesIncorrect}
         />
         <Route path="/le-phishing" component={Phishing} exact />
         <Route path="/le-revenge-porn" component={RevengePorn} exact />

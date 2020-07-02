@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 const CardControlsContainer = styled.div`
@@ -9,7 +10,7 @@ const CardControlsContainer = styled.div`
   font-weight: 600;
 `
 
-const CardControlsButton = styled.span`
+const CardControlsButton = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
