@@ -8,32 +8,16 @@ const MessageBarContainer = styled.div`
   justify-content: center;
   opacity: ${(props) => (props.disabled === false ? "1" : ".5")};
   pointer-events: ${(props) => (props.disabled === false ? null : "none")};
-  position: sticky;
-  bottom: 0;
-  background: #c9e8ed;
-  padding: 0.25rem;
 `
 
-const MessageBar = styled.input`
-  width: 75%;
-  outline: none;
-  border: none;
+const MessageBar = styled.p`
   padding: 4px;
-  font-size: 11px;
-  background: transparent;
+  font-family: "Mont", sans-serif;
+  color: ${Colors.DarkGrey};
+  font-weight: 600;
+  font-size: 14px;
   margin: 0.5rem;
   text-align: center;
-
-  ::placeholder {
-    font-family: "Mont", sans-serif;
-    color: ${Colors.Brand};
-    font-weight: 600;
-  }
 `
 
-const MessageIcon = styled.img`
-  width: 22px;
-  height: auto;
-`
-
-export { MessageBarContainer, MessageBar, MessageIcon }
+export { MessageBarContainer, MessageBar }

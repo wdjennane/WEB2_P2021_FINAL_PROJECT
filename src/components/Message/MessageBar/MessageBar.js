@@ -1,22 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Camera from "./../../../assets/icons/camera.svg"
-import Mic from "./../../../assets/icons/mic.svg"
 
-import { MessageBarContainer, MessageBar, MessageIcon } from "./MessageBarStyle"
+import { MessageBarContainer, MessageBar } from "./MessageBarStyle"
 
-const MessageInput = ({ placeholder, disabled }) => {
+const MessageInput = ({ text, disabled }) => {
   return (
     <MessageBarContainer disabled={disabled}>
-      <MessageIcon src={Camera} />
-      <MessageBar type="text" placeholder={placeholder} disabled />
-      <MessageIcon src={Mic} />
+      <MessageBar>{text}</MessageBar>
     </MessageBarContainer>
   )
 }
 
 MessageInput.propTypes = {
-  placeholder: PropTypes.string,
+  text: PropTypes.string,
   disabled: PropTypes.bool,
 }
 

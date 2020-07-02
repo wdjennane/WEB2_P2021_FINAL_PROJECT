@@ -16,8 +16,8 @@ import {
 const Nav = () => {
   const [homeLink, ...othersLinks] = [
     { to: "/", icon: <NavIconHome /> },
-    { to: "/message", icon: <NavIconMessage /> },
     { to: "/dictionary", icon: <NavIconDictionary /> },
+    { to: "/message", icon: <NavIconMessage /> },
     { to: "/settings", icon: <NavIconSettings /> },
   ]
 
