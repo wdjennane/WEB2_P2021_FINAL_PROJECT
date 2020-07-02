@@ -15,6 +15,8 @@ import Phishing from "./pages/le-phishing"
 import RevengePorn from "./pages/le-revenge-porn"
 import TracesNumeriquesQuestion from "./components/TracesNumeriques/TracesNumeriquesQuestion"
 import TracesNumeriquesIncorrect from "./components/TracesNumeriques/TracesNumeriquesIncorrect"
+import PhishingQuestion from "./components/Phishing/PhishingQuestion"
+import PhishingIncorrect from "./components/Phishing/PhishingIncorrect"
 
 const App = () => {
   return (
@@ -39,6 +41,11 @@ const App = () => {
           component={TracesNumeriquesIncorrect}
         />
         <Route path="/le-phishing" component={Phishing} exact />
+        <Route path="/le-phishing/question/:id" component={PhishingQuestion} />
+        <Route
+          path="/le-phishing/incorrect/:id"
+          component={PhishingIncorrect}
+        />
         <Route path="/le-revenge-porn" component={RevengePorn} exact />
         <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
