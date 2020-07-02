@@ -9,7 +9,7 @@ import {
   LesDangersDuWebItemImage,
   LesDangersDuWebImage,
 } from "../components/LesDangersDuWeb/LesDangersDuWebStyle"
-import { Text, Section, Button } from "../assets/jsStyles/CommonStyle"
+import { Text, Section, Button } from "../jsStyles/CommonStyle"
 import StepImage from "../assets/images/step.png"
 
 const LesDangersDuWeb = () => {

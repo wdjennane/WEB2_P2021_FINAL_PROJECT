@@ -1,5 +1,5 @@
 import React from "react"
-import Colors from "../../assets/jsStyles/Colors"
+import Colors from "../../jsStyles/Colors"
 
 export const NavIconHome = ({ active }) => {
   return (

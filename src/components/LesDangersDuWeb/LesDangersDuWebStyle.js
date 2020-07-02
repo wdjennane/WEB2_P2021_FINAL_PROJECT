@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Colors from "../../assets/jsStyles/Colors"
+import Colors from "../../jsStyles/Colors"
 
 const LesDangersDuWebVideo = styled.div`
   height: 150px;
