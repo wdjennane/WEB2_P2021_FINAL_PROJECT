@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import Colors from "../Colors/Colors"
+import Colors from "../../jsStyles/Colors"
 
 const NavWrapper = styled.nav`
   margin-top: auto;
