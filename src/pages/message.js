@@ -49,11 +49,11 @@ const Message = () => {
           {chips.map((data, index) => (
             <MessageButton key={index} path={data.path} text={data.message} />
           ))}
+          <MessageBar
+            disabled={false}
+            text="Appuies sur le(s) bouton(s) pour répondre"
+          />
         </MessageButtonContainer>
-        <MessageBar
-          disabled={false}
-          placeholder="Appuies sur les boutons pour répondre"
-        />
       </MessageContainer>
     </Layout>
   )
