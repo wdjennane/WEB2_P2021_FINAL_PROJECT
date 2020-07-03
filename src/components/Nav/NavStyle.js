@@ -12,7 +12,6 @@ const NavWrapper = styled.nav`
 const NavHomeLink = styled(Link)`
   display: flex;
   align-items: center;
-  font-size: 0.75rem;
   color: ${Colors.Brand};
 
   svg {

@@ -25,26 +25,4 @@ const LayoutContainer = styled.div`
   overflow-y: scroll;
 `
 
-const LayoutProgressWrapper = styled.div`
-  background-color: ${Colors.BrandLight};
-  height: 5px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-`
-
-const LayoutProgressStyle = styled.div`
-  height: 5px;
-  background-color: ${Colors.Brand};
-`
-
-export {
-  LayoutWrapper,
-  LayoutHeader,
-  LayoutTitle,
-  LayoutContainer,
-  LayoutProgressWrapper,
-  LayoutProgressStyle,
-}
+export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }

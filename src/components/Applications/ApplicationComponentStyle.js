@@ -7,9 +7,8 @@ export const ApplicationContainer = styled.div`
   align-items: center;
 
   span {
-    font-size: 0.625rem;
     color: ${Colors.LightGrey};
-    max-width: 70px;
+    max-width: 120px;
     text-align: center;
   }
 `
