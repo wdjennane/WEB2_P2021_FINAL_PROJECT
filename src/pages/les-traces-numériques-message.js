@@ -15,23 +15,13 @@ const messages = [
   {
     type: "other",
     message:
-      "Bienvenue sur l’app “Les dangers du web” !\n Je m’appelle Céline, je suis là pour t’informer en cas de problème durant le parcours. ",
-  },
-  {
-    type: "other",
-    message:
-      "Le concept est simple 😄 :\n Tu pourras découvrir en introduction les Dangers du web de manière général puis tu vas pacourir plusieurs thèmes où tu seras confronté à des mises en situation, pour y répondre il te suffira de swiper à droite ou à gauche afin d’accèder à une information 😉️",
-  },
-  {
-    type: "other",
-    message:
-      "Tu pourras aussi découvir toutes les definitions dans la rubrique Dictionnaire 😄",
+      "Besoin d’un petit rappel?\nTu vas faire ton premier parcours intéractif, les règles sont très simples :\nTu vas être confronté à des mises en situation sur les 3 parcours. Il te suffira de swiper à droite ou à gauche en fonction de ta réponse 🙂\nN’hésites pas à aller dans la rubrique Dictionnaire 📚 pour retrouver les def et des info en +",
   },
 ]
 
 const chips = [
   {
-    path: "/les-dangers-du-web",
+    // Game route to add
     message: "Oui, compris",
   },
 ]

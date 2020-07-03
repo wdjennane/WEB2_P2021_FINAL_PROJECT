@@ -12,6 +12,7 @@ const MessageWrapper = styled.div`
   align-self: ${(props) => (props.type === "user" ? "flex-end" : "flex-start")};
   font-size: 1rem;
   max-width: 70%;
+  white-space: pre-line;
 `
 
 export default MessageWrapper

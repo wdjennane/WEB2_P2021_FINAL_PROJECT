@@ -12,6 +12,7 @@ import Settings from "./pages/settings"
 import LesDangersDuWeb from "./pages/les-dangers-du-web"
 import Phishing from "./pages/le-phishing"
 import TracesNumeriques from "./pages/les-traces-numériques"
+import TracesNumeriquesMessage from "./pages/les-traces-numériques-message"
 import RevengePorn from "./pages/le-revenge-porn"
 
 const App = () => {
@@ -26,6 +27,11 @@ const App = () => {
         <Route
           path="/les-traces-numeriques"
           component={TracesNumeriques}
+          exact
+        />
+        <Route
+          path="/les-traces-numeriques/message"
+          component={TracesNumeriquesMessage}
           exact
         />
         <Route path="/le-phishing" component={Phishing} exact />
