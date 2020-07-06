@@ -27,7 +27,9 @@ const Layout = ({ children, title, hasPadding, isMessage }) => {
         </LayoutHeader>
       )}
 
-      {pathname !== "/" && pathname !== "/message" && <ProgressBar />}
+      {pathname !== "/" &&
+        pathname !== "/message" &&
+        pathname !== "/les-traces-numeriques/message" && <ProgressBar />}
 
       <LayoutContainer
         isMessage={isMessage}
