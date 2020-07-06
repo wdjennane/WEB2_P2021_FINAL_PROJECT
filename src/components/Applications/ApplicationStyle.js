@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Colors from "../../jsStyles/Colors"
 
-export const ApplicationContainer = styled.div`
+const ApplicationContainer = styled.div`
   display: flex;
   justify-content: space-around;
   width: 90%;
@@ -13,7 +13,7 @@ export const ApplicationContainer = styled.div`
   }
 `
 
-export const Application = styled.div`
+const Application = styled.div`
   height: 80px;
   width: 80px;
   display: flex;
@@ -24,9 +24,11 @@ export const Application = styled.div`
   margin-bottom: 10px;
 `
 
-export const ApplicationColumn = styled.div`
+const ApplicationColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 `
+
+export { ApplicationContainer, Application, ApplicationColumn }

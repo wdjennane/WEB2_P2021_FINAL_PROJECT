@@ -4,7 +4,7 @@ import ApplicationComponent from "./ApplicationComponent"
 import { ApplicationContainer, ApplicationColumn } from "./ApplicationStyle"
 import WebDangerIcon from "../../assets/icons/web-danger.svg"
 import RevengePornIcon from "../../assets/icons/le-revenge-porn.svg"
-import PhishingIcon from "../../assets/icons/phishing_icon.svg"
+import PhishingIcon from "../../assets/icons/phishing-icon.svg"
 import DigitalTraceIcon from "../../assets/icons/les-traces-numeriques.svg"
 
 const Applications = () => {
