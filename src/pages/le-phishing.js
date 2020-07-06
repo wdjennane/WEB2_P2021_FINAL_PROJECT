@@ -7,7 +7,7 @@ const Phishing = () => {
   return (
     <Layout title="Le phishing">
       <Section>
-        <DictionaryCard>
+        <DictionaryCard to="/le-phising/question/1">
           <Text>
             Procédé d'arnaque monté par des pirates informatiques dans la
             volonté de <span>récupérer des informations confidentielles </span>{" "}

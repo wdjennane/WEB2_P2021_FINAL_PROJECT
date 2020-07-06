@@ -7,7 +7,7 @@ const TracesNumeriques = () => {
   return (
     <Layout title="Les traces numériques">
       <Section>
-        <DictionaryCard>
+        <DictionaryCard to="/les-traces-numeriques/question/1">
           <Text>
             <span>
               Commander en ligne, renseigner un formulaire, publier des photos,

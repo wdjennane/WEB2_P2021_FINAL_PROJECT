@@ -7,7 +7,7 @@ const RevengePorn = () => {
   return (
     <Layout title="Le revenge porn">
       <Section>
-        <DictionaryCard>
+        <DictionaryCard to="/le-revenge-porn/question/1">
           <Text>
             Depuis un moment, des comptes Telegram, snapchat, instagram{" "}
             <span>“Fisha”</span>
