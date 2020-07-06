@@ -18,11 +18,13 @@ const App = () => {
       title: "Les traces numériques",
       endpoint: "les-traces-numeriques",
       composant: TracesNumeriques,
+      next: "le-phishing",
     },
     {
       title: "Le phishing",
       endpoint: "le-phishing",
       composant: Phishing,
+      next: "le-revenge-porn",
     },
     {
       title: "Le revenge porn",
@@ -61,7 +63,7 @@ const App = () => {
           />
           <Route
             path={`/${quiz.endpoint}/finish`}
-            render={() => <QuizFinish title={quiz.title} />}
+            render={() => <QuizFinish title={quiz.title} next={quiz.next} />}
             exact
           />
         </Switch>
