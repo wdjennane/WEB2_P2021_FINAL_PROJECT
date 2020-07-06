@@ -6,6 +6,7 @@ import Dictionary from "./pages/dictionary"
 import Settings from "./pages/settings"
 import LesDangersDuWeb from "./pages/les-dangers-du-web"
 import TracesNumeriques from "./pages/les-traces-numeriques"
+import TracesNumeriquesMessage from "./pages/les-traces-numériques-message"
 import Phishing from "./pages/le-phishing"
 import RevengePorn from "./pages/le-revenge-porn"
 import Quiz from "./components/Quiz/Quiz"
@@ -38,6 +39,11 @@ const App = () => {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/message" component={Message} exact />
+        <Route
+          path="/les-traces-numeriques/message"
+          component={TracesNumeriquesMessage}
+          exact
+        />
         <Route path="/dictionary" component={Dictionary} exact />
         <Route path="/settings" component={Settings} exact />
         <Route path="/les-dangers-du-web" component={LesDangersDuWeb} exact />

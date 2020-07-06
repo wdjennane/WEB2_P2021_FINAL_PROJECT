@@ -2,10 +2,15 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import DictionaryCard from "../components/Dictionary/DictionaryCard"
 import { Text, Section } from "../jsStyles/CommonStyle"
+import Notification from "../components/Notification/Notification"
 
 const TracesNumeriques = () => {
   return (
     <Layout title="Les traces numériques">
+      <Notification
+        text="✉️ EXPLICATION NON LU"
+        path="/les-traces-numeriques/message"
+      />
       <Section>
         <DictionaryCard to="/les-traces-numeriques/question/1">
           <Text>

@@ -18,7 +18,8 @@ const Layout = ({ children, title }) => {
     <LayoutWrapper>
       {pathname !== "/" && (
         <LayoutHeader>
-          {pathname === "/message" ? (
+          {pathname === "/message" ||
+          pathname === "/les-traces-numeriques/message" ? (
             <MessageHeader contactName={title} />
           ) : (
             <LayoutTitle>{title}</LayoutTitle>
