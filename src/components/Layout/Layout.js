@@ -18,7 +18,7 @@ const Layout = ({ children, title, hasPadding, isMessage }) => {
     <LayoutWrapper>
       {pathname !== "/" && (
         <LayoutHeader isMessage={isMessage}>
-          {pathname === "/message" &&
+          {pathname === "/message" ||
           pathname === "/les-traces-numeriques/message" ? (
             <MessageHeader contactName={title} />
           ) : (
