@@ -20,8 +20,8 @@ const Button = styled(Link)`
 `
 
 const Section = styled.div`
-  margin: 1rem;
-  height: calc(100% - 2rem);
+  padding: 1rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

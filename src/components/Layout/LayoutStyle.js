@@ -8,7 +8,7 @@ const LayoutWrapper = styled.div`
 `
 
 const LayoutHeader = styled.div`
-  height: 80px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +21,8 @@ const LayoutTitle = styled.h3`
 
 const LayoutContainer = styled.div`
   display: block;
-  height: calc(100% - 80px - 46px);
-  overflow-y: scroll;
+  height: calc(100% - 106px);
+  padding: 1rem;
 `
 
 export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }

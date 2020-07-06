@@ -4,8 +4,8 @@ import Colors from "../../jsStyles/Colors"
 const LayoutProgressWrapper = styled.div`
   background-color: ${Colors.BrandLight};
   height: 5px;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: calc(60px - 5px);
   left: 0;
   z-index: 1;
   width: 100%;

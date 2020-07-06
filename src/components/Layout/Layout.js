@@ -26,10 +26,13 @@ const Layout = ({ children, title }) => {
           )}
         </LayoutHeader>
       )}
+      {pathname !== "/" && <ProgressBar />}
       <LayoutContainer
-        style={{ height: pathname === "/" && "calc(100% - 46px)" }}
+        style={{
+          height: pathname === "/" && "calc(100% - 46px)",
+          padding: pathname === "/les-dangers-du-web" && "unset",
+        }}
       >
-        <ProgressBar />
         {children}
       </LayoutContainer>
       <Nav />
