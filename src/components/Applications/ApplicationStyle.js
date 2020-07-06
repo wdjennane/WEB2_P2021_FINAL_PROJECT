@@ -1,20 +1,21 @@
 import styled from "styled-components"
 import Colors from "../../jsStyles/Colors"
 
-export const ApplicationContainer = styled.div`
+const ApplicationContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 90%;
+  flex-wrap: wrap;
 
   span {
-    font-size: 10px;
     color: ${Colors.LightGrey};
+    margin-bottom: 3.75rem;
   }
 `
 
-export const Application = styled.div`
-  height: 3rem;
-  width: 3rem;
+const Application = styled.div`
+  height: 80px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,3 +23,12 @@ export const Application = styled.div`
   border-radius: 5px;
   margin-bottom: 10px;
 `
+
+const ApplicationColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`
+
+export { ApplicationContainer, Application, ApplicationColumn }
