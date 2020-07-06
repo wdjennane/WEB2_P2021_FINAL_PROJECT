@@ -38,7 +38,7 @@ const chips = [
 
 const Message = () => {
   return (
-    <Layout title="Céline">
+    <Layout title="Céline" isMessage>
       <MessageContainer>
         {messages.map((data, index) => (
           <MessageBubble key={index} type={data.type} text={data.message} />

@@ -6,7 +6,7 @@ import Finish from "../../assets/images/finish.svg"
 
 const QuizFinish = ({ title, next }) => {
   return (
-    <Layout title={title}>
+    <Layout title={title} hasPadding>
       <img
         src={Finish}
         alt="finish"

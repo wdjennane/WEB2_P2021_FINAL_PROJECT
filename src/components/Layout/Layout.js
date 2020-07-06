@@ -11,14 +11,14 @@ import {
 } from "./LayoutStyle"
 import MessageHeader from "../Message/MessageHeader/MessageHeader"
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, hasPadding, isMessage }) => {
   const { pathname } = useLocation()
 
   return (
     <LayoutWrapper>
       {pathname !== "/" && (
-        <LayoutHeader>
-          {pathname === "/message" ||
+        <LayoutHeader isMessage={isMessage}>
+          {pathname === "/message" &&
           pathname === "/les-traces-numeriques/message" ? (
             <MessageHeader contactName={title} />
           ) : (
@@ -26,11 +26,14 @@ const Layout = ({ children, title }) => {
           )}
         </LayoutHeader>
       )}
-      {pathname !== "/" && <ProgressBar />}
+
+      {pathname !== "/" && pathname !== "/message" && <ProgressBar />}
+
       <LayoutContainer
+        isMessage={isMessage}
+        hasPadding={hasPadding}
         style={{
           height: pathname === "/" && "calc(100% - 46px)",
-          padding: pathname === "/les-dangers-du-web" && "unset",
         }}
       >
         {children}
@@ -42,6 +45,8 @@ const Layout = ({ children, title }) => {
 
 Layout.propsTypes = {
   children: PropsTypes.node,
+  isMessage: PropsTypes.bool,
+  hasPadding: PropsTypes.bool,
 }
 
 export default Layout
