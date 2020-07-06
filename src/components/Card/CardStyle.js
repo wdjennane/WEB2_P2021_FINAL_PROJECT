@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Colors from "../../jsStyles/Colors"
 
 const CardContainer = styled.div`
   height: 100%;
@@ -13,13 +14,12 @@ const CardContainer = styled.div`
 `
 
 const CardImg = styled.img`
-  width: 100%;
-  height: auto;
+  height: 40%;
+  object-fit: contain;
 `
 
 const CardImgAnswer = styled.img`
-  width: 100%;
-  height: auto;
+  height: 30%;
 `
 
 const CardSeparator = styled.hr`
@@ -28,11 +28,23 @@ const CardSeparator = styled.hr`
   margin: 1rem 0;
 `
 
-const CardText = styled.p`
+const CardText = styled.div`
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-  margin: 0.5rem;
+  margin: 1rem;
+
+  p {
+    font-weight: normal;
+
+    &:not(:last-child) {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  span {
+    color: ${Colors.Brand};
+  }
 `
 
 const CardTitle = styled.h2`

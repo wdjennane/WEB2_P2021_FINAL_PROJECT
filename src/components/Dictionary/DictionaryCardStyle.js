@@ -20,8 +20,9 @@ const DictionaryCardTitle = styled.h3`
 `
 
 const DictionaryCardIcon = styled.img`
-  width: 36px;
-  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 `
 
 const DictionaryTitleWrapper = styled.span`

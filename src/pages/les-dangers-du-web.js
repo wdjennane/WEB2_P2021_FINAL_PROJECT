@@ -13,7 +13,7 @@ import {
   LesDangersDuWebImage4,
 } from "../components/LesDangersDuWeb/LesDangersDuWebStyle"
 import { Text, Section, Button } from "../jsStyles/CommonStyle"
-import WebDangerEnd from "../assets/images/web-danger-end.svg"
+import WebDangerEnd from "../assets/images/finish.svg"
 import ReactPageScroller from "../../node_modules/react-page-scroller"
 
 const LesDangersDuWeb = () => {
