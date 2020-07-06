@@ -19,7 +19,7 @@ import ReactPageScroller from "../../node_modules/react-page-scroller"
 const LesDangersDuWeb = () => {
   return (
     <Layout title="Introduction">
-      <ReactPageScroller>
+      <ReactPageScroller containerHeight="100%">
         <Section>
           <DictionaryCard>
             <Text>

@@ -17,7 +17,7 @@ const Quiz = ({ endpoint, title }) => {
   }
 
   return (
-    <Layout title={title}>
+    <Layout title={title} hasPadding>
       <Card
         isQuestion
         title={data.title}

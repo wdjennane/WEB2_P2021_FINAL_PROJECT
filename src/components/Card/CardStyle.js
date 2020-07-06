@@ -8,9 +8,9 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   color: black;
-  background: #ffffff;
+  background: #fff;
   border-radius: 5px;
-  box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25);
+  /* box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25); */
 `
 
 const CardImg = styled.img`

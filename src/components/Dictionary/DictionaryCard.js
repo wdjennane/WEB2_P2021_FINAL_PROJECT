@@ -12,7 +12,7 @@ import DownArrow from "../../assets/icons/down-arrow.svg"
 
 const DictionaryCard = ({ children, to }) => {
   return (
-    <DictionaryCardWrapper>
+    <DictionaryCardWrapper style={{ padding: "unset" }}>
       <DictionaryTitleWrapper>
         <NavIconDictionary />
         <DictionaryCardTitle>Définition</DictionaryCardTitle>

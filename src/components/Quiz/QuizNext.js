@@ -19,8 +19,9 @@ const QuizNext = ({ endpoint, title, isCorrect }) => {
     }
     return `/${endpoint}/question/${(data.id + 1).toString()}`
   }
+
   return (
-    <Layout title={title}>
+    <Layout title={title} hasPadding>
       <Card
         title={data.title}
         image={

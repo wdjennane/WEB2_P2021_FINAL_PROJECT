@@ -7,6 +7,7 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+  box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25);
 `
 
 const NavHomeLink = styled(Link)`

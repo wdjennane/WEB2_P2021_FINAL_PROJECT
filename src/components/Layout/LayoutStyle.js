@@ -8,7 +8,7 @@ const LayoutWrapper = styled.div`
 `
 
 const LayoutHeader = styled.div`
-  height: 80px;
+  height: ${({ isMessage }) => (isMessage ? "80px" : "60px")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +21,9 @@ const LayoutTitle = styled.h3`
 
 const LayoutContainer = styled.div`
   display: block;
-  height: calc(100% - 80px - 46px);
-  overflow-y: scroll;
+  height: ${({ isMessage }) =>
+    isMessage ? "calc(100% - 126px)" : "calc(100% - 106px)"};
+  padding: ${({ hasPadding }) => (hasPadding ? "1rem" : "unset")};
 `
 
 export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }
