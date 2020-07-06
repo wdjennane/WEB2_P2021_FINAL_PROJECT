@@ -19,8 +19,7 @@ const CardImg = styled.img`
 `
 
 const CardImgAnswer = styled.img`
-  width: 100%;
-  height: auto;
+  height: 30%;
 `
 
 const CardSeparator = styled.hr`

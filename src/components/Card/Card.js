@@ -20,21 +20,16 @@ const Card = ({
   incorrectPath,
   goBack,
   correctPath,
+  next,
 }) => {
   return (
     <CardContainer>
       <CardTitle>{title}</CardTitle>
 
-      {isQuestion && <CardImg src={image} alt="card" />}
-
-      {/* {isQuestion ? (
-        <CardImg src={image} />
-      ) : (
-        // Ternary todo once the back is linked with the front
-        <CardImgAnswer src="" />
-      )} */}
+      {isQuestion ? <CardImg src={image} /> : <CardImgAnswer src={image} />}
 
       <CardSeparator />
+
       {isQuestion ? (
         <CardText>{text} </CardText>
       ) : (
@@ -51,7 +46,7 @@ const Card = ({
           correctPath={correctPath}
         />
       ) : (
-        <CardControls nextStep={correctPath} />
+        <CardControls nextStep={next} />
       )}
     </CardContainer>
   )
@@ -65,6 +60,7 @@ Card.propTypes = {
   incorrectPath: PropTypes.string,
   goBack: PropTypes.string,
   correctPath: PropTypes.string,
+  next: PropTypes.string,
 }
 
 export default Card
