@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Layout>
       <HomeContainer>
-        <Notification text="✉️ EXPLICATION NON LU" path="/message" />
+        <Notification text="✉️ EXPLICATION NON LUE" path="/message" />
         <h1>Les dangers du web</h1>
         <Applications />
       </HomeContainer>
