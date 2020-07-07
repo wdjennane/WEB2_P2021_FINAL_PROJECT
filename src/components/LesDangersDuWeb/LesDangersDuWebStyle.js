@@ -7,10 +7,18 @@ import LesDangersDuWebImage3 from "../../assets/images/web-danger-03.svg"
 import LesDangersDuWebImage4 from "../../assets/images/web-danger-04.svg"
 
 const LesDangersDuWebVideo = styled.div`
-  height: 150px;
-  width: 100%;
-  background-color: ${Colors.LightGrey};
-  margin: 1rem 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 `
 
 const LesDangersDuWebList = styled.ul`
@@ -25,14 +33,16 @@ const LesDangersDuWebItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
 
-const LesDangersDuWebItemImage = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: ${Colors.LightGrey};
-  margin: 0 0 0.5rem 0;
+  span {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0.5rem 0;
+  }
 `
 
 const LesDangersDuWebSuccessText = styled.div`
@@ -45,7 +55,6 @@ export {
   LesDangersDuWebVideo,
   LesDangersDuWebList,
   LesDangersDuWebItem,
-  LesDangersDuWebItemImage,
   LesDangersDuWebSuccessText,
   LesDangersDuWebImage1,
   LesDangersDuWebImage2,

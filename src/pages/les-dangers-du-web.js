@@ -6,7 +6,6 @@ import {
   LesDangersDuWebList,
   LesDangersDuWebItem,
   LesDangersDuWebVideo,
-  LesDangersDuWebItemImage,
   LesDangersDuWebImage1,
   LesDangersDuWebImage2,
   LesDangersDuWebImage3,
@@ -100,7 +99,17 @@ const LesDangersDuWeb = () => {
             avec <span>Le Roi des rats</span>
           </Text>
 
-          <LesDangersDuWebVideo></LesDangersDuWebVideo>
+          <LesDangersDuWebVideo>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/2b54gMTgnaE"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Les dangers d'internet chez les jeunes"
+            ></iframe>
+          </LesDangersDuWebVideo>
 
           <Text>
             <span>Si tu te retrouve dans un des cas cités :</span>
@@ -108,15 +117,21 @@ const LesDangersDuWeb = () => {
 
           <LesDangersDuWebList>
             <LesDangersDuWebItem>
-              <LesDangersDuWebItemImage />
+              <span role="img" aria-label="parent">
+                👫
+              </span>
               Parent
             </LesDangersDuWebItem>
             <LesDangersDuWebItem>
-              <LesDangersDuWebItemImage />
+              <span role="img" aria-label="family">
+                👪
+              </span>
               Proche
             </LesDangersDuWebItem>
             <LesDangersDuWebItem>
-              <LesDangersDuWebItemImage />
+              <span role="img" aria-label="policemen">
+                👮
+              </span>
               Police
             </LesDangersDuWebItem>
           </LesDangersDuWebList>

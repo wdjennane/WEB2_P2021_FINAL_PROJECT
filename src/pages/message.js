@@ -51,7 +51,7 @@ const Message = () => {
           ))}
           <MessageBar
             disabled={false}
-            text="Appuies sur le(s) bouton(s) pour répondre"
+            text="Appuie sur le(s) bouton(s) pour répondre"
           />
         </MessageButtonContainer>
       </MessageContainer>
