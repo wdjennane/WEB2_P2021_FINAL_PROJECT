@@ -15,6 +15,7 @@ const CardInteractionButton = styled.a`
   flex-direction: column;
   align-items: center;
   margin: 0 1rem;
+  cursor: pointer;
 
   img {
     padding: 0.75rem;

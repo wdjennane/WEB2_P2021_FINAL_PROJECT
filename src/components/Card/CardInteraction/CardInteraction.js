@@ -16,18 +16,23 @@ const CardInteraction = ({ incorrectPath, goBack, correctPath }) => {
   return (
     <CardInteractionContainer>
       <CardInteractionButton
+        onClick={() => history.push(`${incorrectPath}`)}
         onTouchStart={() => history.push(`${incorrectPath}`)}
       >
         <img src={Cross} alt="" />
         <p>Non</p>
       </CardInteractionButton>
 
-      <CardInteractionButton onTouchStart={() => history.push(`${goBack}`)}>
+      <CardInteractionButton
+        onClick={() => history.push(`${goBack}`)}
+        onTouchStart={() => history.push(`${goBack}`)}
+      >
         <img src={Back} alt="" />
         <p>Retour</p>
       </CardInteractionButton>
 
       <CardInteractionButton
+        onClick={() => history.push(`${correctPath}`)}
         onTouchStart={() => history.push(`${correctPath}`)}
       >
         <img src={Check} alt="" />
