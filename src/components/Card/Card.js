@@ -23,7 +23,7 @@ const Card = ({
   next,
 }) => {
   return (
-    <CardContainer>
+    <CardContainer isQuestion={isQuestion}>
       <CardTitle>{title}</CardTitle>
 
       {isQuestion ? <CardImg src={image} /> : <CardImgAnswer src={image} />}
