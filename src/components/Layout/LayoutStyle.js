@@ -24,6 +24,10 @@ const LayoutContainer = styled.div`
   height: ${({ isMessage }) =>
     isMessage ? "calc(100% - 126px)" : "calc(100% - 106px)"};
   padding: ${({ hasPadding }) => (hasPadding ? "1rem" : "unset")};
+
+  div {
+    height: ${({ isCard }) => (isCard ? "100%" : null)};
+  }
 `
 
 export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }
