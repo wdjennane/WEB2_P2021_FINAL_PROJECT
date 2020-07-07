@@ -56,7 +56,8 @@ const Quiz = ({ url, endpoint, title }) => {
           title={question.title}
           image={`/images/${endpoint}-${currentQuestionId}.jpg`}
           text={question.question}
-          nextPath={`/${url}/next/${currentQuestionId}`}
+          incorrectPath={`/${url}/incorrect/${currentQuestionId}`}
+          correctPath={`/${url}/correct/${currentQuestionId}`}
           goBack={goBack()}
         />
       </TinderCard>

@@ -11,7 +11,16 @@ import {
   CardTitle,
 } from "./CardStyle"
 
-const Card = ({ isQuestion, title, image, text, nextPath, goBack }) => {
+const Card = ({
+  isQuestion,
+  title,
+  image,
+  text,
+  correctPath,
+  incorrectPath,
+  nextPath,
+  goBack,
+}) => {
   return (
     <CardContainer isQuestion={isQuestion}>
       <CardTitle>{title}</CardTitle>
@@ -30,7 +39,11 @@ const Card = ({ isQuestion, title, image, text, nextPath, goBack }) => {
       )}
 
       {isQuestion ? (
-        <CardInteraction nextPath={nextPath} goBack={goBack} />
+        <CardInteraction
+          correctPath={correctPath}
+          incorrectPath={incorrectPath}
+          goBack={goBack}
+        />
       ) : (
         <CardControls nextPath={nextPath} />
       )}
@@ -45,6 +58,8 @@ Card.propTypes = {
   text: PropTypes.string,
   goBack: PropTypes.string,
   nextPath: PropTypes.string,
+  incorrectPath: PropTypes.string,
+  correctPath: PropTypes.string,
 }
 
 export default Card

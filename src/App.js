@@ -1,5 +1,10 @@
 import React from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom"
 import Home from "./pages/home"
 import Message from "./pages/message"
 import Dictionary from "./pages/dictionary"
@@ -66,9 +71,20 @@ const App = () => {
             )}
           />
           <Route
-            path={`/${quiz.url}/next/:id`}
+            path={`/${quiz.url}/incorrect/:id`}
             render={() => (
               <QuizNext
+                title={quiz.title}
+                url={quiz.url}
+                endpoint={quiz.endpoint}
+              />
+            )}
+          />
+          <Route
+            path={`/${quiz.url}/correct/:id`}
+            render={() => (
+              <QuizNext
+                isCorrect
                 title={quiz.title}
                 url={quiz.url}
                 endpoint={quiz.endpoint}
@@ -82,9 +98,9 @@ const App = () => {
           />
         </Switch>
       ))}
-      {/* <Switch>
-        <Route path="*" render={() => <Redirect to="/" />} />
-      </Switch> */}
+      <Switch>
+        <Route path="*" exact render={() => <Redirect to="/" />} />
+      </Switch>
     </Router>
   )
 }

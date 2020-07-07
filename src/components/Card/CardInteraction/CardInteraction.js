@@ -54,7 +54,8 @@ const CardInteraction = ({ incorrectPath, goBack, correctPath }) => {
 }
 
 CardInteraction.propTypes = {
-  nextPath: PropTypes.string,
+  correctPath: PropTypes.string,
+  incorrectPath: PropTypes.string,
   goBack: PropTypes.string,
 }
 

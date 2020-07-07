@@ -7,7 +7,7 @@ import Card from "../Card/Card"
 import CorrectAnswer from "../../assets/icons/correct-answer.svg"
 import IncorrectAnswer from "../../assets/icons/incorrect-answer.svg"
 
-const QuizNext = ({ url, endpoint, title }) => {
+const QuizNext = ({ url, endpoint, title, isCorrect }) => {
   const { id: questionId } = useParams()
   const [questions, setQuestions] = useState([])
 
@@ -38,7 +38,15 @@ const QuizNext = ({ url, endpoint, title }) => {
     <Layout title={title} hasPadding>
       <Card
         title={question.title}
-        image={Number(question.answer) ? CorrectAnswer : IncorrectAnswer}
+        image={
+          isCorrect
+            ? Number(question.answer)
+              ? CorrectAnswer
+              : CorrectAnswer
+            : Number(question.answer)
+            ? IncorrectAnswer
+            : IncorrectAnswer
+        }
         text={question.answerText}
         nextPath={next()}
       />
@@ -50,6 +58,7 @@ QuizNext.propTypes = {
   url: PropTypes.string,
   endpoint: PropTypes.string,
   title: PropTypes.string,
+  isCorrect: PropTypes.bool,
 }
 
 export default QuizNext
