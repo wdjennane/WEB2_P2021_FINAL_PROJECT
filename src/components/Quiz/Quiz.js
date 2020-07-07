@@ -20,11 +20,11 @@ const Quiz = ({ endpoint, title }) => {
 
   const onSwipe = (direction) => {
     if (direction === "right") {
-      history.push(`/${endpoint}/incorrect/${data.id}`)
+      history.push(`/${endpoint}/correct/${data.id}`)
     }
 
     if (direction === "left") {
-      history.push(`/${endpoint}/correct/${data.id}`)
+      history.push(`/${endpoint}/incorrect/${data.id}`)
     }
   }
 
