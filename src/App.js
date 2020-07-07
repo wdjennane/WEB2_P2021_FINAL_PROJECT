@@ -17,19 +17,22 @@ const App = () => {
   const quizRouter = [
     {
       title: "Les traces numériques",
-      endpoint: "les-traces-numeriques",
+      url: "les-traces-numeriques",
+      endpoint: "digital-traces",
       composant: TracesNumeriques,
       next: "le-phishing",
     },
     {
       title: "Le phishing",
-      endpoint: "le-phishing",
+      url: "le-phishing",
+      endpoint: "phishing",
       composant: Phishing,
       next: "le-revenge-porn",
     },
     {
       title: "Le revenge porn",
-      endpoint: "le-revenge-porn",
+      url: "le-revenge-porn",
+      endpoint: "revenge-porn",
       composant: RevengePorn,
     },
   ]
@@ -48,27 +51,32 @@ const App = () => {
         <Route path="/settings" component={Settings} exact />
         <Route path="/les-dangers-du-web" component={LesDangersDuWeb} exact />
       </Switch>
+
       {quizRouter.map((quiz, index) => (
         <Switch key={index}>
-          <Route path={`/${quiz.endpoint}`} component={quiz.composant} exact />
+          <Route path={`/${quiz.url}`} component={quiz.composant} exact />
           <Route
-            path={`/${quiz.endpoint}/question/:id`}
-            render={() => <Quiz title={quiz.title} endpoint={quiz.endpoint} />}
-          />
-          <Route
-            path={`/${quiz.endpoint}/correct/:id`}
+            path={`/${quiz.url}/question/:id`}
             render={() => (
-              <QuizNext isCorrect title={quiz.title} endpoint={quiz.endpoint} />
+              <Quiz
+                url={quiz.url}
+                title={quiz.title}
+                endpoint={quiz.endpoint}
+              />
             )}
           />
           <Route
-            path={`/${quiz.endpoint}/incorrect/:id`}
+            path={`/${quiz.url}/next/:id`}
             render={() => (
-              <QuizNext title={quiz.title} endpoint={quiz.endpoint} />
+              <QuizNext
+                title={quiz.title}
+                url={quiz.url}
+                endpoint={quiz.endpoint}
+              />
             )}
           />
           <Route
-            path={`/${quiz.endpoint}/finish`}
+            path={`/${quiz.url}/finish`}
             render={() => <QuizFinish title={quiz.title} next={quiz.next} />}
             exact
           />

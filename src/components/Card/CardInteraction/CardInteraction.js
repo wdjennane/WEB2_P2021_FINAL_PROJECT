@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import Cross from "./../../../assets/icons/cross.svg"
 import Back from "./../../../assets/icons/back.svg"
 import Check from "./../../../assets/icons/check.svg"
-
 import {
   CardInteractionContainer,
   CardInteractionButton,
@@ -55,9 +54,8 @@ const CardInteraction = ({ incorrectPath, goBack, correctPath }) => {
 }
 
 CardInteraction.propTypes = {
-  incorrect: PropTypes.string,
+  nextPath: PropTypes.string,
   goBack: PropTypes.string,
-  correct: PropTypes.string,
 }
 
 export default CardInteraction

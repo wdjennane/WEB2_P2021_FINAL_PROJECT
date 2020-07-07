@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import CardInteraction from "./CardInteraction/CardInteraction"
+import CardControls from "./CardControls/CardControls"
 import {
   CardContainer,
   CardImg,
@@ -9,19 +11,7 @@ import {
   CardTitle,
 } from "./CardStyle"
 
-import CardInteraction from "./CardInteraction/CardInteraction"
-import CardControls from "./CardControls/CardControls"
-
-const Card = ({
-  isQuestion,
-  title,
-  image,
-  text,
-  incorrectPath,
-  goBack,
-  correctPath,
-  next,
-}) => {
+const Card = ({ isQuestion, title, image, text, nextPath, goBack }) => {
   return (
     <CardContainer isQuestion={isQuestion}>
       <CardTitle>{title}</CardTitle>
@@ -40,13 +30,9 @@ const Card = ({
       )}
 
       {isQuestion ? (
-        <CardInteraction
-          incorrectPath={incorrectPath}
-          goBack={goBack}
-          correctPath={correctPath}
-        />
+        <CardInteraction nextPath={nextPath} goBack={goBack} />
       ) : (
-        <CardControls nextStep={next} />
+        <CardControls nextPath={nextPath} />
       )}
     </CardContainer>
   )
@@ -57,10 +43,8 @@ Card.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
   text: PropTypes.string,
-  incorrectPath: PropTypes.string,
   goBack: PropTypes.string,
-  correctPath: PropTypes.string,
-  next: PropTypes.string,
+  nextPath: PropTypes.string,
 }
 
 export default Card

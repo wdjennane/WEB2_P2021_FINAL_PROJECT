@@ -1,13 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Next from "./../../../assets/icons/next.svg"
-
 import { CardControlsContainer, CardControlsButton } from "./CardControlsStyle"
 
-const CardControls = ({ nextStep }) => {
+const CardControls = ({ nextPath }) => {
   return (
     <CardControlsContainer>
-      <CardControlsButton to={nextStep}>
+      <CardControlsButton to={nextPath}>
         <img src={Next} alt="" />
         <p>Suite</p>
       </CardControlsButton>
@@ -16,7 +15,7 @@ const CardControls = ({ nextStep }) => {
 }
 
 CardControls.propTypes = {
-  next: PropTypes.string,
+  nextPath: PropTypes.string,
 }
 
 export default CardControls

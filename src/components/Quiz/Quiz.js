@@ -1,30 +1,46 @@
-import React from "react"
+import axios from "axios"
+import React, { useEffect, useState } from "react"
+import TinderCard from "react-tinder-card"
 import { useParams, useHistory } from "react-router-dom"
 import PropTypes from "prop-types"
 import Layout from "../Layout/Layout"
 import Card from "../Card/Card"
-import Mock from "../../mock/index"
-import TinderCard from "react-tinder-card"
 
-const Quiz = ({ endpoint, title }) => {
-  const { id: questionId } = useParams()
-
-  const { results } = Mock.find((mock) => mock.endpoint === endpoint)
-  const data = results.find((mock) => mock.id.toString() === questionId)
+const Quiz = ({ url, endpoint, title }) => {
   const history = useHistory()
+  const { id: questionId } = useParams()
+  const [questions, setQuestions] = useState([])
+
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: `https://hetic.zinutti.fr/api/question/${endpoint}`,
+    }).then(({ data }) => setQuestions(data))
+  }, [endpoint, questionId])
+
+  const currentQuestionId =
+    questions.findIndex((question, index) => {
+      return index + 1 === Number(questionId)
+    }) + 1
+
+  const question =
+    questions.length &&
+    questions.find(() => {
+      return currentQuestionId === Number(questionId)
+    })
 
   const goBack = () => {
-    if (data.id === 1) return `/${endpoint}`
-    return `/${endpoint}/question/${(data.id - 1).toString()}`
+    if (currentQuestionId === 1) return `/${url}`
+    return `/${url}/question/${currentQuestionId - 1}`
   }
 
   const onSwipe = (direction) => {
     if (direction === "right") {
-      history.push(`/${endpoint}/correct/${data.id}`)
+      history.push(`/${endpoint}/correct/${currentQuestionId}`)
     }
 
     if (direction === "left") {
-      history.push(`/${endpoint}/incorrect/${data.id}`)
+      history.push(`/${endpoint}/incorrect/${currentQuestionId}`)
     }
   }
 
@@ -37,12 +53,11 @@ const Quiz = ({ endpoint, title }) => {
       >
         <Card
           isQuestion
-          title={data.title}
-          image={data.image}
-          text={data.description}
-          incorrectPath={`/${endpoint}/incorrect/${data.id}`}
+          title={question.title}
+          image={`/images/${endpoint}-${currentQuestionId}.jpg`}
+          text={question.question}
+          nextPath={`/${url}/next/${currentQuestionId}`}
           goBack={goBack()}
-          correctPath={`/${endpoint}/correct/${data.id}`}
         />
       </TinderCard>
     </Layout>
@@ -50,6 +65,7 @@ const Quiz = ({ endpoint, title }) => {
 }
 
 Quiz.propTypes = {
+  url: PropTypes.string,
   endpoint: PropTypes.string,
   title: PropTypes.string,
 }
