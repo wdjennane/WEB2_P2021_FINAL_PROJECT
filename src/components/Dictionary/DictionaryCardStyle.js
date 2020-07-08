@@ -2,10 +2,14 @@ import styled from "styled-components"
 import Colors from "../../jsStyles/Colors"
 
 const DictionaryCardWrapper = styled.div`
-  padding: 1rem;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  p:not(:last-child) {
-    margin: 0 0 1rem 0;
+  a {
+    margin-top: auto;
   }
 `
 
@@ -19,9 +23,7 @@ const DictionaryCardTitle = styled.h3`
 `
 
 const DictionaryCardIcon = styled.img`
-  margin: auto;
-  display: flex;
-  justify-content: center;
+  margin-top: auto;
 `
 
 const DictionaryTitleWrapper = styled.span`
