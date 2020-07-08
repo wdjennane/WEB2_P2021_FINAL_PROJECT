@@ -32,6 +32,8 @@ const LayoutContainer = styled.div`
   height: ${({ isMessage }) =>
     isMessage ? "calc(100% - 126px)" : "calc(100% - 106px)"};
   padding: ${({ hasPadding }) => (hasPadding ? "1rem" : "unset")};
+  max-width: 450px;
+  margin: auto;
 
   div {
     height: ${({ isCard }) => (isCard ? "100%" : null)};
