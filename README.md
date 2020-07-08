@@ -1,6 +1,9 @@
-# Les dangers du WEB
+# Les dangers du WEB - Groupe 10
 
+#### Lien du site
 https://heticprojet.zinutti.fr/
+#### Lien du back-end
+https://github.com/MydroX/web2-2021-project
 
 ## 📝 Table des matières
 - [Technos/Librairies](#tech)
