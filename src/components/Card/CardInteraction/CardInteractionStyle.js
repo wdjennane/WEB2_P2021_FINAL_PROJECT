@@ -6,8 +6,9 @@ const CardInteractionContainer = styled.div`
   justify-content: center;
   width: 100%;
   align-items: center;
-  font-size: 12px;
   font-weight: 600;
+  height: auto !important;
+  font-size: 14px;
 `
 
 const CardInteractionButton = styled.a`
@@ -19,12 +20,11 @@ const CardInteractionButton = styled.a`
 
   img {
     padding: 0.75rem;
-    height: 48px;
-    width: 48px;
-    border-radius: 24px;
-    background: white;
-    box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25);
-    margin: 0.5rem 0;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 40px rgba(146, 146, 146, 0.5);
+    margin: 0 0 0.5rem 0;
   }
 
   :nth-child(1) {
@@ -32,8 +32,7 @@ const CardInteractionButton = styled.a`
   }
 
   :nth-child(2) {
-    transform: scale(1.25);
-    color: ${Colors.BrandLight};
+    color: ${Colors.Brand};
   }
 
   :nth-child(3) {

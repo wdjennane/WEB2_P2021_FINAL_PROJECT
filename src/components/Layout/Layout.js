@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useHistory } from "react-router-dom"
 import PropsTypes from "prop-types"
 import Nav from "../Nav/Nav"
 import ProgressBar from "../ProgressBar/ProgressBar"
@@ -8,16 +8,20 @@ import {
   LayoutHeader,
   LayoutTitle,
   LayoutContainer,
+  LayoutBackLink,
 } from "./LayoutStyle"
 import MessageHeader from "../Message/MessageHeader/MessageHeader"
+import BackIcon from "../../assets/icons/back-arrow.svg"
 
 const Layout = ({ children, title, hasPadding, isMessage, isCard }) => {
   const { pathname } = useLocation()
+  const { goBack } = useHistory()
 
   return (
     <LayoutWrapper>
       {pathname !== "/" && (
         <LayoutHeader isMessage={isMessage}>
+          <LayoutBackLink onClick={goBack} src={BackIcon} alt="back" />
           {pathname === "/message" ||
           pathname === "/les-traces-numeriques/message" ? (
             <MessageHeader contactName={title} />

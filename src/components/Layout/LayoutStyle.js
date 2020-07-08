@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Colors from "../../jsStyles/Colors"
 
 const LayoutWrapper = styled.div`
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,6 +20,13 @@ const LayoutTitle = styled.h3`
   color: ${Colors.TextDark};
 `
 
+const LayoutBackLink = styled.img`
+  position: absolute;
+  left: 1rem;
+  height: 20px;
+  width: 20px;
+`
+
 const LayoutContainer = styled.div`
   display: block;
   height: ${({ isMessage }) =>
@@ -30,4 +38,10 @@ const LayoutContainer = styled.div`
   }
 `
 
-export { LayoutWrapper, LayoutHeader, LayoutTitle, LayoutContainer }
+export {
+  LayoutWrapper,
+  LayoutHeader,
+  LayoutTitle,
+  LayoutBackLink,
+  LayoutContainer,
+}

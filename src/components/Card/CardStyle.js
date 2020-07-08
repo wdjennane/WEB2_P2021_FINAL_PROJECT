@@ -7,7 +7,6 @@ const CardContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  color: black;
   background: #fff;
   border-radius: 5px;
   padding: ${({ isQuestion }) => (isQuestion ? "1rem" : null)};
@@ -21,20 +20,25 @@ const CardImg = styled.img`
 `
 
 const CardImgAnswer = styled.img`
-  height: 30%;
+  height: 25%;
 `
 
-const CardSeparator = styled.hr`
-  border-top: 1px solid white;
-  width: 95%;
-  margin: 1rem 0;
+const CardSeparator = styled.span`
+  height: 1px;
+  width: calc(100% - 2rem);
+  margin: 0.5rem 0;
+  background-color: ${Colors.BrandLight};
 `
 
-const CardText = styled.div`
-  font-size: 14px;
+const CardText = styled.p`
   font-weight: 600;
   text-align: center;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
+  font-size: 14px;
+
+  @media (min-width: 370px) {
+    font-size: 1rem;
+  }
 
   p {
     font-weight: normal;
@@ -50,9 +54,8 @@ const CardText = styled.div`
 `
 
 const CardTitle = styled.h2`
-  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  color: ${Colors.TextDark};
 `
 
 export {

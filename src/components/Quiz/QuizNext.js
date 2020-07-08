@@ -1,46 +1,56 @@
-import React from "react"
+import axios from "axios"
+import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import PropTypes from "prop-types"
 import Layout from "../Layout/Layout"
 import Card from "../Card/Card"
-import Mock from "../../mock/index"
 import CorrectAnswer from "../../assets/icons/correct-answer.svg"
 import IncorrectAnswer from "../../assets/icons/incorrect-answer.svg"
 
-const QuizNext = ({ endpoint, title, isCorrect }) => {
+const QuizNext = ({ url, endpoint, title, isCorrect }) => {
   const { id: questionId } = useParams()
+  const [questions, setQuestions] = useState([])
 
-  const { results } = Mock.find((mock) => mock.endpoint === endpoint)
-  const data = results.find((mock) => mock.id.toString() === questionId)
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: `https://hetic.zinutti.fr/api/question/${endpoint}`,
+    }).then(({ data }) => setQuestions(data))
+  }, [endpoint, questionId])
+
+  const question =
+    questions.length &&
+    questions.find((question, index) => {
+      return index + 1 === Number(questionId)
+    })
 
   const next = () => {
-    if (Number(questionId) === results.length) {
-      return `/${endpoint}/finish`
-    }
-    return `/${endpoint}/question/${(data.id + 1).toString()}`
+    if (Number(questionId) === questions.length) return `/${url}/finish`
+    return `/${url}/question/${Number(questionId) + 1}`
   }
 
   return (
     <Layout title={title} hasPadding>
       <Card
-        title={data.title}
+        title={question.title}
         image={
           isCorrect
-            ? data.correctAnswer
+            ? Number(question.answer)
               ? CorrectAnswer
-              : IncorrectAnswer
-            : !data.correctAnswer
-            ? CorrectAnswer
+              : CorrectAnswer
+            : Number(question.answer)
+            ? IncorrectAnswer
             : IncorrectAnswer
         }
-        text={isCorrect ? data.sucessHelp : data.errorHelp}
-        next={next()}
+        text={question.answerText}
+        nextPath={next()}
       />
     </Layout>
   )
 }
 
 QuizNext.propTypes = {
+  url: PropTypes.string,
   endpoint: PropTypes.string,
   title: PropTypes.string,
   isCorrect: PropTypes.bool,
