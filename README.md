@@ -2,7 +2,7 @@
 
 #### Lien du site
 https://heticprojet.zinutti.fr/
-#### Lien du back-end
+#### Repo du back-end
 https://github.com/MydroX/web2-2021-project
 
 ## 📝 Table des matières
@@ -20,15 +20,13 @@ De plus React possède une multitude de component et de framework ui.
 ### 🌎 Axios
 
 Axios permet de faire des requêtes http depuis le navigateur en utilisant le/la Promise API.<br>
-Axios permet de simplifier les requêtes asynchrones et permet de faire des opérations très simplement (ex : dans un CRUD)<br>
-Axios peut être utilisé en JS Vanilla mais aussi avec un framework tel que React ou Vue.<br>
+Axios permet de simplifier les requêtes avec notre API<br>
 Il a été utilisé dans ce projet afin de récupérer les données du quiz et de l'introduction.
 
 ### 🎨 SASS
 
 SASS est un préprocesseur CSS qui permet l’utilisation de variables, mixins, fonctions ainsi que l’utilisation d’import.<br>
 SASS permet de rendre le CSS beaucoup plus « puissant » tout en restant simple, avec par exemple l’imbrication des sélecteurs.<br>
-SASS compile le code et crée un fichier CSS qui est compréhensible pour le navigateur.<br>
 SASS a été utilisé pour l'import du reset, des polices et du style du toast.
 
 ### 🖌️ Styled Component
@@ -47,9 +45,9 @@ Cela permet d'ajouter la web app à l'écran d'accueil du téléphone et de masq
 
 ### 📦 Divers packages npm
 
-react-toastify : Permet la création de toast pouvant être utilisé comme notification (notification de message dans le cas de notre projet)<br>
-react-tinder-card : Permet de reproduire l’effet de swipe présent dans l’application tinder (utilisé dans notre projet pour la partie mise en situation/quiz)<br>
-react-page-scroller : Permet de scroll entre plusieurs sections avec un scroll « guidé » similaire à l’application TikTok (utilisé dans la partie introduction)<br>
+[react-toastify](https://www.npmjs.com/package/react-toastify): Permet la création de toast pouvant être utilisé comme notification (notification de message dans le cas de notre projet)<br>
+[react-tinder-card](https://www.npmjs.com/package/react-tinder-card): Permet de reproduire l’effet de swipe présent dans l’application tinder (utilisé dans notre projet pour la partie mise en situation/quiz)<br>
+[react-page-scroller](https://www.npmjs.com/package/react-page-scroller): Permet de scroll entre plusieurs sections avec un scroll « guidé » similaire à l’application TikTok (utilisé dans la partie introduction)<br>
 L’utilisation de ces packages ont permis de reproduire certains comportements propres aux applications mobiles.
 
 
