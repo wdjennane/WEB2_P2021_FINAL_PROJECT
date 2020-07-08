@@ -18,29 +18,24 @@ const Quiz = ({ url, endpoint, title }) => {
     }).then(({ data }) => setQuestions(data))
   }, [endpoint, questionId])
 
-  const currentQuestionId =
-    questions.findIndex((question, index) => {
-      return index + 1 === Number(questionId)
-    }) + 1
-
   const question =
     questions.length &&
-    questions.find(() => {
-      return currentQuestionId === Number(questionId)
+    questions.find((question, index) => {
+      return index + 1 === Number(questionId)
     })
 
   const goBack = () => {
-    if (currentQuestionId === 1) return `/${url}`
-    return `/${url}/question/${currentQuestionId - 1}`
+    if (questionId === 1) return `/${url}`
+    return `/${url}/question/${questionId - 1}`
   }
 
   const onSwipe = (direction) => {
     if (direction === "right") {
-      history.push(`/${endpoint}/correct/${currentQuestionId}`)
+      history.push(`/${url}/correct/${questionId}`)
     }
 
     if (direction === "left") {
-      history.push(`/${endpoint}/incorrect/${currentQuestionId}`)
+      history.push(`/${url}/incorrect/${questionId}`)
     }
   }
 
@@ -54,10 +49,10 @@ const Quiz = ({ url, endpoint, title }) => {
         <Card
           isQuestion
           title={question.title}
-          image={`/images/${endpoint}-${currentQuestionId}.jpg`}
+          image={`/images/${endpoint}-${questionId}.jpg`}
           text={question.question}
-          incorrectPath={`/${url}/incorrect/${currentQuestionId}`}
-          correctPath={`/${url}/correct/${currentQuestionId}`}
+          incorrectPath={`/${url}/incorrect/${questionId}`}
+          correctPath={`/${url}/correct/${questionId}`}
           goBack={goBack()}
         />
       </TinderCard>

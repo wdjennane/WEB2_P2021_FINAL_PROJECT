@@ -18,20 +18,15 @@ const QuizNext = ({ url, endpoint, title, isCorrect }) => {
     }).then(({ data }) => setQuestions(data))
   }, [endpoint, questionId])
 
-  const currentQuestionId =
-    questions.findIndex((question, index) => {
-      return index + 1 === Number(questionId)
-    }) + 1
-
   const question =
     questions.length &&
     questions.find((question, index) => {
-      return currentQuestionId === Number(questionId)
+      return index + 1 === Number(questionId)
     })
 
   const next = () => {
-    if (currentQuestionId === questions.length) return `/${url}/finish`
-    return `/${url}/question/${currentQuestionId + 1}`
+    if (Number(questionId) === questions.length) return `/${url}/finish`
+    return `/${url}/question/${Number(questionId) + 1}`
   }
 
   return (

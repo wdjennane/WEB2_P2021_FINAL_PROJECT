@@ -7,7 +7,6 @@ const CardContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  color: black;
   background: #fff;
   border-radius: 5px;
   padding: ${({ isQuestion }) => (isQuestion ? "1rem" : null)};
@@ -31,10 +30,15 @@ const CardSeparator = styled.span`
   background-color: ${Colors.BrandLight};
 `
 
-const CardText = styled.div`
+const CardText = styled.p`
   font-weight: 600;
   text-align: center;
   margin: 0.5rem 1rem;
+  font-size: 14px;
+
+  @media (min-width: 370px) {
+    font-size: 1rem;
+  }
 
   p {
     font-weight: normal;
@@ -51,6 +55,7 @@ const CardText = styled.div`
 
 const CardTitle = styled.h2`
   font-weight: 600;
+  color: ${Colors.TextDark};
 `
 
 export {

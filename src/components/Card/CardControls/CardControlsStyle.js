@@ -9,6 +9,7 @@ const CardControlsContainer = styled.div`
   align-items: center;
   font-weight: 600;
   padding: 0 1rem;
+  font-size: 14px;
 `
 
 const CardControlsButton = styled(Link)`
