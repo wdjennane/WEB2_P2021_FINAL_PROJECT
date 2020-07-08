@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import styled from "styled-components"
 import Colors from "../../../jsStyles/Colors"
 
@@ -11,11 +10,12 @@ const CardInteractionContainer = styled.div`
   font-weight: 600;
 `
 
-const CardInteractionButton = styled(Link)`
+const CardInteractionButton = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 1rem;
+  cursor: pointer;
 
   img {
     padding: 0.75rem;

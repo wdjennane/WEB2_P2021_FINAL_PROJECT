@@ -10,7 +10,9 @@ const CardContainer = styled.div`
   color: black;
   background: #fff;
   border-radius: 5px;
-  /* box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25); */
+  padding: ${({ isQuestion }) => (isQuestion ? "1rem" : null)};
+  box-shadow: ${({ isQuestion }) =>
+    isQuestion ? "0px 4px 35px rgba(146, 146, 146, 0.25)" : null};
 `
 
 const CardImg = styled.img`

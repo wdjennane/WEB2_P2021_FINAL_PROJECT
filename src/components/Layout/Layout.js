@@ -11,7 +11,7 @@ import {
 } from "./LayoutStyle"
 import MessageHeader from "../Message/MessageHeader/MessageHeader"
 
-const Layout = ({ children, title, hasPadding, isMessage }) => {
+const Layout = ({ children, title, hasPadding, isMessage, isCard }) => {
   const { pathname } = useLocation()
 
   return (
@@ -34,6 +34,7 @@ const Layout = ({ children, title, hasPadding, isMessage }) => {
       <LayoutContainer
         isMessage={isMessage}
         hasPadding={hasPadding}
+        isCard={isCard}
         style={{
           height: pathname === "/" && "calc(100% - 46px)",
         }}
@@ -49,6 +50,7 @@ Layout.propsTypes = {
   children: PropsTypes.node,
   isMessage: PropsTypes.bool,
   hasPadding: PropsTypes.bool,
+  isCard: PropsTypes.bool,
 }
 
 export default Layout

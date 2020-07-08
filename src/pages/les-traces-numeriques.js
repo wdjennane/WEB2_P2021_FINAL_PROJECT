@@ -8,7 +8,7 @@ const TracesNumeriques = () => {
   return (
     <Layout title="Les traces numériques">
       <Notification
-        text="✉️ EXPLICATION NON LU"
+        text="✉️ BESOIN D’UN RAPPEL ?"
         path="/les-traces-numeriques/message"
       />
       <Section>

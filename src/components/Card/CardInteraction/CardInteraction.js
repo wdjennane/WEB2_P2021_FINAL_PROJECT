@@ -1,4 +1,5 @@
 import React from "react"
+import { useHistory } from "react-router-dom"
 import PropTypes from "prop-types"
 import Cross from "./../../../assets/icons/cross.svg"
 import Back from "./../../../assets/icons/back.svg"
@@ -10,19 +11,42 @@ import {
 } from "./CardInteractionStyle"
 
 const CardInteraction = ({ incorrectPath, goBack, correctPath }) => {
+  const history = useHistory()
+
+  const incorrect = () => {
+    history.push(`${incorrectPath}`)
+  }
+
+  const previous = () => {
+    history.push(`${goBack}`)
+  }
+
+  const correct = () => {
+    history.push(`${correctPath}`)
+  }
+
   return (
     <CardInteractionContainer>
-      <CardInteractionButton to={incorrectPath}>
+      <CardInteractionButton
+        onClick={() => incorrect()}
+        onTouchStart={() => incorrect()}
+      >
         <img src={Cross} alt="" />
         <p>Non</p>
       </CardInteractionButton>
 
-      <CardInteractionButton to={goBack}>
+      <CardInteractionButton
+        onClick={() => previous()}
+        onTouchStart={() => previous()}
+      >
         <img src={Back} alt="" />
         <p>Retour</p>
       </CardInteractionButton>
 
-      <CardInteractionButton to={correctPath}>
+      <CardInteractionButton
+        onClick={() => correct()}
+        onTouchStart={() => correct()}
+      >
         <img src={Check} alt="" />
         <p>Oui</p>
       </CardInteractionButton>

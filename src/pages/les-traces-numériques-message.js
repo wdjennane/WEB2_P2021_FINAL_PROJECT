@@ -42,7 +42,7 @@ const Message = () => {
         </MessageButtonContainer>
         <MessageBar
           disabled={false}
-          placeholder="Appuies sur les boutons pour répondre"
+          placeholder="Appuie sur les boutons pour répondre"
         />
       </MessageContainer>
     </Layout>
