@@ -10,6 +10,12 @@ https://github.com/MydroX/web2-2021-project
 - [Installation](#setup)
 - [Contributeurs](#authors)
 
+## ⚠️ Disclaimer 
+
+Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC.<br>
+Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation.<br>
+Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié
+
 ## ⛏️ Technos/Librairies utilisées <a name = "tech"></a>
 
 ### ⚛️ React
@@ -31,7 +37,7 @@ SASS a été utilisé pour l'import du reset, des polices et du style du toast.
 
 ### 🖌️ Styled Component
 
-Styled Components permet de rendre plus simple le style de notre composant dans notre application et le js.<br>
+Styled Components permet de rendre plus simple le style de nos composants dans notre application et le js.<br>
 Styled Components permet donc de changer facilement de style en fonction des interactions de l'utilisateur.
 
 ### 📱 Mobile first
