@@ -4,10 +4,10 @@ import Application from "../components/Application/Application"
 import Notification from "../components/Notification/Notification"
 import { HomeContainer, HomeTitle } from "../jsStyles/pages/HomeStyle"
 import { ApplicationWrapper } from "../components/Application/ApplicationStyle"
-import WebDangerIcon from "../assets/icons/web-danger.svg"
-import RevengePornIcon from "../assets/icons/le-revenge-porn.svg"
-import PhishingIcon from "../assets/icons/phishing-icon.svg"
-import DigitalTraceIcon from "../assets/icons/les-traces-numeriques.svg"
+import WebDangerIcon from "../assets/icons/les-dangers-du-web-iconn.svg"
+import RevengePornIcon from "../assets/icons/le-revenge-porn-icon.svg"
+import PhishingIcon from "../assets/icons/le-phishing-icon.svg"
+import DigitalTraceIcon from "../assets/icons/les-traces-numeriques-icon.svg"
 
 const Home = () => {
   const applications = [
@@ -17,19 +17,19 @@ const Home = () => {
       image: WebDangerIcon,
     },
     {
-      url: "le-phishing",
-      display: "Le phishing",
-      image: RevengePornIcon,
-    },
-    {
       url: "les-traces-numeriques",
       display: "Les Traces numériques",
+      image: DigitalTraceIcon,
+    },
+    {
+      url: "le-phishing",
+      display: "Le phishing",
       image: PhishingIcon,
     },
     {
       url: "le-revenge-porn",
       display: "Revenge porn",
-      image: DigitalTraceIcon,
+      image: RevengePornIcon,
     },
   ]
   return (
