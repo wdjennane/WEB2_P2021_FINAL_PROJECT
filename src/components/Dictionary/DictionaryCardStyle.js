@@ -23,7 +23,18 @@ const DictionaryCardTitle = styled.h3`
 `
 
 const DictionaryCardIcon = styled.img`
+  width: 25px;
   margin-top: auto;
+  animation: scroll-down 1s ease-in-out 0.3s infinite;
+
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `
 
 const DictionaryTitleWrapper = styled.span`
