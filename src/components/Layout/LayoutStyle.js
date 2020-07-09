@@ -25,6 +25,7 @@ const LayoutBackLink = styled.img`
   left: 1rem;
   height: 20px;
   width: 20px;
+  cursor: pointer;
 `
 
 const LayoutContainer = styled.div`

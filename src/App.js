@@ -12,27 +12,29 @@ import RevengePorn from "./pages/le-revenge-porn"
 import Quiz from "./components/Quiz/Quiz"
 import QuizNext from "./components/Quiz/QuizNext"
 import QuizFinish from "./components/Quiz/QuizFinish"
+import Layout from "./components/Layout/Layout"
 
 const App = () => {
   const quizRouter = [
     {
       title: "Les traces numériques",
-      url: "les-traces-numeriques",
+      url: "/les-traces-numeriques",
       endpoint: "digital-traces",
+      next: "/le-phishing",
       composant: TracesNumeriques,
-      next: "le-phishing",
     },
     {
       title: "Le phishing",
-      url: "le-phishing",
+      url: "/le-phishing",
       endpoint: "phishing",
+      next: "/le-revenge-porn",
       composant: Phishing,
-      next: "le-revenge-porn",
     },
     {
       title: "Le revenge porn",
-      url: "le-revenge-porn",
+      url: "/le-revenge-porn",
       endpoint: "revenge-porn",
+      next: "/les-traces-numeriques",
       composant: RevengePorn,
     },
   ]
@@ -54,9 +56,9 @@ const App = () => {
 
       {quizRouter.map((quiz, index) => (
         <Switch key={index}>
-          <Route path={`/${quiz.url}`} component={quiz.composant} exact />
+          <Route path={`${quiz.url}`} component={quiz.composant} exact />
           <Route
-            path={`/${quiz.url}/question/:id`}
+            path={`${quiz.url}/question/:id`}
             render={() => (
               <Quiz
                 url={quiz.url}
@@ -66,7 +68,7 @@ const App = () => {
             )}
           />
           <Route
-            path={`/${quiz.url}/incorrect/:id`}
+            path={`${quiz.url}/incorrect/:id`}
             render={() => (
               <QuizNext
                 title={quiz.title}
@@ -76,7 +78,7 @@ const App = () => {
             )}
           />
           <Route
-            path={`/${quiz.url}/correct/:id`}
+            path={`${quiz.url}/correct/:id`}
             render={() => (
               <QuizNext
                 isCorrect
@@ -87,8 +89,12 @@ const App = () => {
             )}
           />
           <Route
-            path={`/${quiz.url}/finish`}
-            render={() => <QuizFinish title={quiz.title} next={quiz.next} />}
+            path={`${quiz.url}/finish`}
+            render={() => (
+              <Layout title={quiz.title} hasPadding>
+                <QuizFinish title={quiz.title} next={quiz.next} />
+              </Layout>
+            )}
             exact
           />
         </Switch>

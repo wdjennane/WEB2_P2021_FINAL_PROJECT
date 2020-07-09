@@ -29,7 +29,7 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   &:not(:last-child) {
-    margin: 0 0.5rem 0 0;
+    margin: 0 1rem 0 0;
   }
 
   svg {

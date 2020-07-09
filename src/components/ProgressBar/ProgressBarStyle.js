@@ -3,16 +3,16 @@ import Colors from "../../jsStyles/Colors"
 
 const LayoutProgressWrapper = styled.div`
   background-color: ${Colors.BrandLight};
-  height: 2px;
+  height: 4px;
   position: fixed;
-  top: calc(60px - 2px);
+  top: calc(60px - 4px);
   left: 0;
   z-index: 1;
   width: 100%;
 `
 
 const LayoutProgressStyle = styled.div`
-  height: 2px;
+  height: 4px;
   background-color: ${Colors.Brand};
 `
 

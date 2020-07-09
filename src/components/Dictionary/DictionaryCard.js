@@ -7,14 +7,12 @@ import {
   DictionaryTitleWrapper,
   DictionaryCardIcon,
 } from "./DictionaryCardStyle"
-import { NavIconDictionary } from "./../Nav/NavIcons"
 import DownArrow from "../../assets/icons/down-arrow.svg"
 
 const DictionaryCard = ({ children, to }) => {
   return (
     <DictionaryCardWrapper>
       <DictionaryTitleWrapper>
-        <NavIconDictionary />
         <DictionaryCardTitle>Définition</DictionaryCardTitle>
       </DictionaryTitleWrapper>
       {children}

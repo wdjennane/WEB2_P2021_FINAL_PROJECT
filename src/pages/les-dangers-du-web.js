@@ -1,7 +1,9 @@
 import React from "react"
+import ReactPageScroller from "react-page-scroller"
 import Layout from "../components/Layout/Layout"
 import Step from "../components/Step/Step"
 import DictionaryCard from "../components/Dictionary/DictionaryCard"
+import QuizFinish from "../components/Quiz/QuizFinish"
 import {
   LesDangersDuWebList,
   LesDangersDuWebItem,
@@ -10,15 +12,13 @@ import {
   LesDangersDuWebImage2,
   LesDangersDuWebImage3,
   LesDangersDuWebImage4,
-} from "../components/LesDangersDuWeb/LesDangersDuWebStyle"
-import { Text, Section, Button } from "../jsStyles/CommonStyle"
-import WebDangerEnd from "../assets/images/finish.svg"
-import ReactPageScroller from "../../node_modules/react-page-scroller"
+} from "../jsStyles/pages/LesDangersDuWebStyle"
+import { Text, Section } from "../jsStyles/CommonStyle"
 
 const LesDangersDuWeb = () => {
   return (
     <Layout title="Introduction">
-      <ReactPageScroller containerHeight="100%">
+      <ReactPageScroller containerHeight="100%" containerWidth="100%">
         <Section>
           <DictionaryCard>
             <Text>
@@ -138,34 +138,10 @@ const LesDangersDuWeb = () => {
         </Section>
 
         <Section>
-          <img
-            alt=""
-            src={WebDangerEnd}
-            style={{
-              width: "100%",
-              height: "40%",
-            }}
+          <QuizFinish
+            title="L’introduction aux dangers du web"
+            next="/les-traces-numeriques"
           />
-          <h2
-            style={{
-              margin: "0 0 1rem",
-              fontWeight: "600",
-              textAlign: "center",
-              color: "black",
-            }}
-          >
-            Découvres vite la suite !
-          </h2>
-          <Text>
-            Tu as finis “<span>L’introduction aux dangers du web</span>” !
-            Continues à t’informer en débloquant de nouveaux thèmes.
-          </Text>
-          <Button
-            to="/les-traces-numeriques"
-            style={{ margin: "2rem auto 1rem" }}
-          >
-            Parcours suivant
-          </Button>
         </Section>
       </ReactPageScroller>
     </Layout>

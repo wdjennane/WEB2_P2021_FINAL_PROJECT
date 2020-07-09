@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import Colors from "../../jsStyles/Colors"
-
+import Colors from "../Colors"
 import LesDangersDuWebImage1 from "../../assets/images/web-danger-01.svg"
 import LesDangersDuWebImage2 from "../../assets/images/web-danger-02.svg"
 import LesDangersDuWebImage3 from "../../assets/images/web-danger-03.svg"

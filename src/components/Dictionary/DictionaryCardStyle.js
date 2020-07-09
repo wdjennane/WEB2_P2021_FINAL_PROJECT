@@ -16,7 +16,7 @@ const DictionaryCardWrapper = styled.div`
 const DictionaryCardTitle = styled.h3`
   color: ${Colors.TitleLight};
   text-align: center;
-  margin: 0 0 0.5rem 0;
+  margin: 1rem 0;
   font-size: 3rem;
   font-weight: 900;
   transform: translateX(-46px);
