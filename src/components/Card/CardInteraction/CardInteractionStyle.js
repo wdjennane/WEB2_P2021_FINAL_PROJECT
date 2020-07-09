@@ -23,7 +23,7 @@ const CardInteractionButton = styled.a`
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    box-shadow: 0px 5px 40px rgba(146, 146, 146, 0.5);
+    box-shadow: 0px 5px 40px rgba(146, 146, 146, 0.25);
     margin: 0 0 0.5rem 0;
   }
 

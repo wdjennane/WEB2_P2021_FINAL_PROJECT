@@ -16,14 +16,25 @@ const DictionaryCardWrapper = styled.div`
 const DictionaryCardTitle = styled.h3`
   color: ${Colors.TitleLight};
   text-align: center;
-  margin: 0 0 0.5rem 0;
+  margin: 1rem 0;
   font-size: 3rem;
   font-weight: 900;
   transform: translateX(-46px);
 `
 
 const DictionaryCardIcon = styled.img`
+  width: 25px;
   margin-top: auto;
+  animation: scroll-down 1s ease-in-out 0.3s infinite;
+
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `
 
 const DictionaryTitleWrapper = styled.span`

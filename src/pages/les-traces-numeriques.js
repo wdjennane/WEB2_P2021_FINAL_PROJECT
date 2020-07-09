@@ -1,10 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import Layout from "../components/Layout/Layout"
 import DictionaryCard from "../components/Dictionary/DictionaryCard"
 import { Text, Section } from "../jsStyles/CommonStyle"
 import Notification from "../components/Notification/Notification"
 
 const TracesNumeriques = () => {
+  const history = useHistory()
+
+  const onScroll = () => history.push("/les-traces-numeriques/question/1")
+
+  useEffect(() => {
+    window.addEventListener("wheel", onScroll)
+    window.addEventListener("touchmove", onScroll)
+    return () => {
+      window.removeEventListener("wheel", onScroll)
+      window.removeEventListener("touchmove", onScroll)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <Layout title="Les traces numériques">
       <Notification

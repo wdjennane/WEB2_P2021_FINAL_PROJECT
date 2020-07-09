@@ -25,8 +25,8 @@ const QuizNext = ({ url, endpoint, title, isCorrect }) => {
     })
 
   const next = () => {
-    if (Number(questionId) === questions.length) return `/${url}/finish`
-    return `/${url}/question/${Number(questionId) + 1}`
+    if (Number(questionId) === questions.length) return `${url}/finish`
+    return `${url}/question/${Number(questionId) + 1}`
   }
 
   return (

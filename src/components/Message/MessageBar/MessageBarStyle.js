@@ -11,12 +11,12 @@ const MessageBarContainer = styled.div`
 `
 
 const MessageBar = styled.p`
-  padding: 4px;
+  padding: 0.5rem;
   font-family: "Mont", sans-serif;
   color: ${Colors.DarkGrey};
   font-weight: 600;
   font-size: 14px;
-  margin: 0.5rem;
+  margin: 1rem 0 0;
   text-align: center;
 `
 

@@ -14,9 +14,13 @@ const Button = styled(Link)`
   text-align: center;
   color: white;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   padding: 0.25rem;
   background-color: ${Colors.Brand};
+
+  @media (min-width: 370px) {
+    padding: 0.5rem;
+  }
 `
 
 const Section = styled.div`
