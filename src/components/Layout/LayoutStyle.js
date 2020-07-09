@@ -9,10 +9,13 @@ const LayoutWrapper = styled.div`
 `
 
 const LayoutHeader = styled.div`
+  position: fixed;
+  width: 100%;
   height: ${({ isMessage }) => (isMessage ? "80px" : "60px")};
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 `
 
 const LayoutTitle = styled.h3`
@@ -29,13 +32,16 @@ const LayoutBackLink = styled.img`
 `
 
 const LayoutContainer = styled.div`
+  position: fixed;
+  width: 100%;
   display: block;
   height: ${({ isMessage }) =>
     isMessage ? "calc(100% - 126px)" : "calc(100% - 106px)"};
   padding: ${({ hasPadding }) => (hasPadding ? "1rem" : "unset")};
   max-width: 450px;
-  margin: auto;
-
+  /* margin: 60px auto 46px; */
+  margin: ${({ isMessage }) =>
+    isMessage ? "80px auto 46px;" : "60px auto 46px;"};
   div {
     height: ${({ isCard }) => (isCard ? "100%" : null)};
   }

@@ -41,6 +41,7 @@ const Layout = ({ children, title, hasPadding, isMessage, isCard }) => {
         isCard={isCard}
         style={{
           height: pathname === "/" && "calc(100% - 46px)",
+          margin: pathname === "/" && "0 auto 46px",
         }}
       >
         {children}

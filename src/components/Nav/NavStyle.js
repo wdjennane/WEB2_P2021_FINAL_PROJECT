@@ -3,11 +3,15 @@ import { Link } from "react-router-dom"
 import Colors from "../../jsStyles/Colors"
 
 const NavWrapper = styled.nav`
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   box-shadow: 0px 4px 35px rgba(146, 146, 146, 0.25);
+  background-color: white;
 `
 
 const NavHomeLink = styled(Link)`
