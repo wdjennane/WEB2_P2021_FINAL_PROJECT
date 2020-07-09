@@ -77,7 +77,7 @@ const Home = () => {
               cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas
               fait l'objet d'une demande de droit d'utilisation. Ce site ne sera
               en aucun cas exploité à des fins commerciales et ne sera pas
-              publié”
+              publié
             </HomeDisclaimerModal>
           </HomeDisclaimerModalWrapper>
         )}
