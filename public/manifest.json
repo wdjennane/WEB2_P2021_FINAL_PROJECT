@@ -1,6 +1,12 @@
 {
   "name": "Les dangers du Web",
   "short_name": "Web Danger",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,10 +24,5 @@
       "sizes": "512x512"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "fullscreen",
-  "orientation": "portrait",
-  "Scope": "/",
-  "start_url": "./index.html"
+  "splash_pages": null
 }
