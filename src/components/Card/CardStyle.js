@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Colors from "../../jsStyles/Colors"
 
 const CardContainer = styled.div`
+  position: relative;
   height: 100%;
   display: flex;
   align-items: center;
@@ -58,6 +59,38 @@ const CardTitle = styled.h2`
   color: ${Colors.TextDark};
 `
 
+const CardModalWrapper = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`
+
+const CardModalOvarlay = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+`
+const CardModalCloseButton = styled.img`
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+`
+
+const CardModalImage = styled.img`
+  max-height: 80%;
+  object-fit: contain;
+  z-index: 9;
+  border-radius: 10px;
+  backdrop-filter: brightness(0%) invert(1);
+`
+
 export {
   CardContainer,
   CardImg,
@@ -65,4 +98,8 @@ export {
   CardSeparator,
   CardText,
   CardTitle,
+  CardModalWrapper,
+  CardModalOvarlay,
+  CardModalImage,
+  CardModalCloseButton,
 }

@@ -39,9 +39,11 @@ const LayoutContainer = styled.div`
     isMessage ? "calc(100% - 126px)" : "calc(100% - 106px)"};
   padding: ${({ hasPadding }) => (hasPadding ? "1rem" : "unset")};
   max-width: 450px;
-  /* margin: 60px auto 46px; */
+  transform: translateX(-50%);
+  left: 50%;
   margin: ${({ isMessage }) =>
     isMessage ? "80px auto 46px;" : "60px auto 46px;"};
+
   div {
     height: ${({ isCard }) => (isCard ? "100%" : null)};
   }

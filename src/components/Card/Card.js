@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import CardInteraction from "./CardInteraction/CardInteraction"
 import CardControls from "./CardControls/CardControls"
@@ -9,7 +9,12 @@ import {
   CardSeparator,
   CardText,
   CardTitle,
+  CardModalWrapper,
+  CardModalImage,
+  CardModalOvarlay,
+  CardModalCloseButton,
 } from "./CardStyle"
+import CloseIcon from "../../assets/icons/close.svg"
 
 const Card = ({
   isQuestion,
@@ -21,11 +26,38 @@ const Card = ({
   nextPath,
   goBack,
 }) => {
+  const [isZoomed, setIsZoomed] = useState(false)
+
   return (
     <CardContainer isQuestion={isQuestion}>
       <CardTitle>{title}</CardTitle>
 
-      {isQuestion ? <CardImg src={image} /> : <CardImgAnswer src={image} />}
+      {isQuestion ? (
+        <CardImg
+          src={image}
+          alt=""
+          onClick={() => setIsZoomed(true)}
+          onTouchStart={() => setIsZoomed(true)}
+        />
+      ) : (
+        <CardImgAnswer src={image} alt="" />
+      )}
+
+      {isQuestion && isZoomed && (
+        <CardModalWrapper>
+          <CardModalOvarlay
+            onClick={() => setIsZoomed(false)}
+            onTouchStart={() => setIsZoomed(false)}
+          />
+          <CardModalCloseButton
+            src={CloseIcon}
+            alt=""
+            onClick={() => setIsZoomed(false)}
+            onTouchStart={() => setIsZoomed(false)}
+          />
+          <CardModalImage src={image} alt="" />
+        </CardModalWrapper>
+      )}
 
       <CardSeparator />
 
