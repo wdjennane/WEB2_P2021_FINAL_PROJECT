@@ -47,10 +47,10 @@ const QuizNext = ({
           isCorrect
             ? Number(question.answer)
               ? CorrectAnswer
-              : CorrectAnswer
+              : IncorrectAnswer
             : Number(question.answer)
             ? IncorrectAnswer
-            : IncorrectAnswer
+            : CorrectAnswer
         }
         text={question.answerText}
         nextPath={next()}
