@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import Layout from "../Layout/Layout"
 import Card from "../Card/Card"
 
-const Quiz = ({ url, endpoint, title }) => {
+const Quiz = ({ url, endpoint, title, progressWidth, setProgressWidth }) => {
   const history = useHistory()
   const { id: questionId } = useParams()
   const [questions, setQuestions] = useState([])
@@ -15,8 +15,11 @@ const Quiz = ({ url, endpoint, title }) => {
     axios({
       method: "GET",
       url: `https://hetic.zinutti.fr/api/question/${endpoint}`,
-    }).then(({ data }) => setQuestions(data))
-  }, [endpoint, questionId])
+    }).then(({ data }) => {
+      setQuestions(data)
+      setProgressWidth((questionId / (data.length + 1)) * 100)
+    })
+  }, [endpoint, questionId, setProgressWidth])
 
   const question =
     questions.length &&
@@ -40,7 +43,7 @@ const Quiz = ({ url, endpoint, title }) => {
   }
 
   return (
-    <Layout title={title} hasPadding isCard>
+    <Layout title={title} progressWidth={progressWidth} hasPadding isCard>
       <TinderCard
         onSwipe={onSwipe}
         onCardLeftScreen={() => null}
@@ -64,6 +67,8 @@ Quiz.propTypes = {
   url: PropTypes.string,
   endpoint: PropTypes.string,
   title: PropTypes.string,
+  progressWidth: PropTypes.number,
+  setProgressWidth: PropTypes.func,
 }
 
 export default Quiz

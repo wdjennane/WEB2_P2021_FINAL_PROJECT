@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Home from "./pages/home"
 import Message from "./pages/message"
@@ -38,6 +38,7 @@ const App = () => {
       composant: RevengePorn,
     },
   ]
+  const [progressWidth, setProgressWidth] = useState(0)
 
   return (
     <Router>
@@ -51,7 +52,16 @@ const App = () => {
         />
         <Route path="/dictionary" component={Dictionary} exact />
         <Route path="/settings" component={Settings} exact />
-        <Route path="/les-dangers-du-web" component={LesDangersDuWeb} exact />
+        <Route
+          path="/les-dangers-du-web"
+          render={() => (
+            <LesDangersDuWeb
+              progressWidth={progressWidth}
+              setProgressWidth={setProgressWidth}
+            />
+          )}
+          exact
+        />
       </Switch>
 
       {quizRouter.map((quiz, index) => (
@@ -64,6 +74,8 @@ const App = () => {
                 url={quiz.url}
                 title={quiz.title}
                 endpoint={quiz.endpoint}
+                progressWidth={progressWidth}
+                setProgressWidth={setProgressWidth}
               />
             )}
           />
@@ -74,6 +86,8 @@ const App = () => {
                 title={quiz.title}
                 url={quiz.url}
                 endpoint={quiz.endpoint}
+                progressWidth={progressWidth}
+                setProgressWidth={setProgressWidth}
               />
             )}
           />
@@ -85,14 +99,24 @@ const App = () => {
                 title={quiz.title}
                 url={quiz.url}
                 endpoint={quiz.endpoint}
+                progressWidth={progressWidth}
+                setProgressWidth={setProgressWidth}
               />
             )}
           />
           <Route
             path={`${quiz.url}/finish`}
             render={() => (
-              <Layout title={quiz.title} hasPadding>
-                <QuizFinish title={quiz.title} next={quiz.next} />
+              <Layout
+                title={quiz.title}
+                progressWidth={progressWidth}
+                hasPadding
+              >
+                <QuizFinish
+                  title={quiz.title}
+                  next={quiz.next}
+                  setProgressWidth={setProgressWidth}
+                />
               </Layout>
             )}
             exact

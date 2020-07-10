@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { Button } from "../../jsStyles/CommonStyle"
 import {
@@ -9,7 +9,11 @@ import {
 } from "./QuizFinishStyle"
 import Finish from "../../assets/images/finish.svg"
 
-const QuizFinish = ({ title, next }) => {
+const QuizFinish = ({ title, next, setProgressWidth }) => {
+  useEffect(() => {
+    setProgressWidth(100)
+  }, [setProgressWidth])
+
   return (
     <QuizFinishWrapper>
       <QuizFinishImage src={Finish} alt="finish" />
@@ -33,6 +37,7 @@ const QuizFinish = ({ title, next }) => {
 QuizFinish.propTypes = {
   title: PropTypes.string.isRequired,
   next: PropTypes.string.isRequired,
+  setProgressWidth: PropTypes.func,
 }
 
 export default QuizFinish

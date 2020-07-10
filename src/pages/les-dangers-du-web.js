@@ -1,5 +1,6 @@
 import React from "react"
 import ReactPageScroller from "react-page-scroller"
+import PropsTypes from "prop-types"
 import Layout from "../components/Layout/Layout"
 import Step from "../components/Step/Step"
 import DictionaryCard from "../components/Dictionary/DictionaryCard"
@@ -8,6 +9,7 @@ import {
   LesDangersDuWebList,
   LesDangersDuWebItem,
   LesDangersDuWebVideo,
+  LesDangersDuWebVideoWrapper,
   LesDangersDuWebImage1,
   LesDangersDuWebImage2,
   LesDangersDuWebImage3,
@@ -15,10 +17,16 @@ import {
 } from "../jsStyles/pages/LesDangersDuWebStyle"
 import { Text, Section } from "../jsStyles/CommonStyle"
 
-const LesDangersDuWeb = () => {
+const LesDangersDuWeb = ({ progressWidth, setProgressWidth }) => {
+  const pageOnChange = (number) => setProgressWidth((number / 6) * 100)
+
   return (
-    <Layout title="Introduction">
-      <ReactPageScroller containerHeight="100%" containerWidth="100%">
+    <Layout title="Introduction" progressWidth={progressWidth}>
+      <ReactPageScroller
+        containerHeight="100%"
+        containerWidth="100%"
+        pageOnChange={pageOnChange}
+      >
         <Section>
           <DictionaryCard>
             <Text>
@@ -98,18 +106,19 @@ const LesDangersDuWeb = () => {
             On te laisse découvrir davantage d’informations à propos des dangers
             avec <span>Le Roi des rats</span>
           </Text>
-
-          <LesDangersDuWebVideo>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/2b54gMTgnaE"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Les dangers d'internet chez les jeunes"
-            ></iframe>
-          </LesDangersDuWebVideo>
+          <LesDangersDuWebVideoWrapper>
+            <LesDangersDuWebVideo>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube-nocookie.com/embed/2b54gMTgnaE"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Les dangers d'internet chez les jeunes"
+              ></iframe>
+            </LesDangersDuWebVideo>
+          </LesDangersDuWebVideoWrapper>
 
           <Text>
             <span>Si tu te retrouve dans un des cas cités :</span>
@@ -141,11 +150,17 @@ const LesDangersDuWeb = () => {
           <QuizFinish
             title="L’introduction aux dangers du web"
             next="/les-traces-numeriques"
+            setProgressWidth={setProgressWidth}
           />
         </Section>
       </ReactPageScroller>
     </Layout>
   )
+}
+
+Layout.propsTypes = {
+  progressWidth: PropsTypes.number,
+  setProgressWidth: PropsTypes.func,
 }
 
 export default LesDangersDuWeb

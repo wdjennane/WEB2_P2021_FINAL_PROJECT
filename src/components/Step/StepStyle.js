@@ -25,9 +25,10 @@ const StepNumber = styled.span`
 `
 
 const StepImage = styled.img`
-  width: 100%;
+  width: 90%;
   height: 40%;
   object-fit: contain;
+  margin: 0.5rem auto;
 `
 
 const StepContainer = styled.div``

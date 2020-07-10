@@ -13,7 +13,14 @@ import {
 import MessageHeader from "../Message/MessageHeader/MessageHeader"
 import BackIcon from "../../assets/icons/back-arrow.svg"
 
-const Layout = ({ children, title, hasPadding, isMessage, isCard }) => {
+const Layout = ({
+  children,
+  title,
+  progressWidth,
+  hasPadding,
+  isMessage,
+  isCard,
+}) => {
   const { pathname } = useLocation()
   const { goBack } = useHistory()
 
@@ -33,7 +40,9 @@ const Layout = ({ children, title, hasPadding, isMessage, isCard }) => {
 
       {pathname !== "/" &&
         pathname !== "/message" &&
-        pathname !== "/les-traces-numeriques/message" && <ProgressBar />}
+        pathname !== "/les-traces-numeriques/message" && (
+          <ProgressBar progressWidth={progressWidth} />
+        )}
 
       <LayoutContainer
         isMessage={isMessage}
@@ -53,6 +62,7 @@ const Layout = ({ children, title, hasPadding, isMessage, isCard }) => {
 
 Layout.propsTypes = {
   children: PropsTypes.node,
+  progressWidth: PropsTypes.number,
   isMessage: PropsTypes.bool,
   hasPadding: PropsTypes.bool,
   isCard: PropsTypes.bool,

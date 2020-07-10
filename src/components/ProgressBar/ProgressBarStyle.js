@@ -14,6 +14,7 @@ const LayoutProgressWrapper = styled.div`
 const LayoutProgressStyle = styled.div`
   height: 4px;
   background-color: ${Colors.Brand};
+  transition: width 0.3s ease;
 `
 
 export { LayoutProgressWrapper, LayoutProgressStyle }

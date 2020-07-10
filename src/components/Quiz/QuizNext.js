@@ -7,7 +7,14 @@ import Card from "../Card/Card"
 import CorrectAnswer from "../../assets/icons/correct-answer.svg"
 import IncorrectAnswer from "../../assets/icons/incorrect-answer.svg"
 
-const QuizNext = ({ url, endpoint, title, isCorrect }) => {
+const QuizNext = ({
+  url,
+  endpoint,
+  title,
+  isCorrect,
+  progressWidth,
+  setProgressWidth,
+}) => {
   const { id: questionId } = useParams()
   const [questions, setQuestions] = useState([])
 
@@ -15,8 +22,11 @@ const QuizNext = ({ url, endpoint, title, isCorrect }) => {
     axios({
       method: "GET",
       url: `https://hetic.zinutti.fr/api/question/${endpoint}`,
-    }).then(({ data }) => setQuestions(data))
-  }, [endpoint, questionId])
+    }).then(({ data }) => {
+      setQuestions(data)
+      setProgressWidth((questionId / (data.length + 1)) * 100)
+    })
+  }, [endpoint, questionId, setProgressWidth])
 
   const question =
     questions.length &&
@@ -30,7 +40,7 @@ const QuizNext = ({ url, endpoint, title, isCorrect }) => {
   }
 
   return (
-    <Layout title={title} hasPadding>
+    <Layout title={title} progressWidth={progressWidth} hasPadding>
       <Card
         title={question.title}
         image={
@@ -54,6 +64,8 @@ QuizNext.propTypes = {
   endpoint: PropTypes.string,
   title: PropTypes.string,
   isCorrect: PropTypes.bool,
+  progressWidth: PropTypes.number,
+  setProgressWidth: PropTypes.func,
 }
 
 export default QuizNext

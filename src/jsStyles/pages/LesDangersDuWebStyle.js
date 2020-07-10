@@ -5,6 +5,9 @@ import LesDangersDuWebImage2 from "../../assets/images/web-danger-02.svg"
 import LesDangersDuWebImage3 from "../../assets/images/web-danger-03.svg"
 import LesDangersDuWebImage4 from "../../assets/images/web-danger-04.svg"
 
+const LesDangersDuWebVideoWrapper = styled.div`
+  margin: 1rem 0;
+`
 const LesDangersDuWebVideo = styled.div`
   overflow: hidden;
   padding-bottom: 56.25%;
@@ -23,7 +26,7 @@ const LesDangersDuWebVideo = styled.div`
 const LesDangersDuWebList = styled.ul`
   display: flex;
   justify-content: center;
-  margin: 2rem 0 0;
+  margin: 1rem 0 0;
 `
 
 const LesDangersDuWebItem = styled.li`
@@ -52,6 +55,7 @@ const LesDangersDuWebSuccessText = styled.div`
 
 export {
   LesDangersDuWebVideo,
+  LesDangersDuWebVideoWrapper,
   LesDangersDuWebList,
   LesDangersDuWebItem,
   LesDangersDuWebSuccessText,

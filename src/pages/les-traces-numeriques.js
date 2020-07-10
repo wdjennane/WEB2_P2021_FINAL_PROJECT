@@ -21,26 +21,29 @@ const TracesNumeriques = () => {
   }, [])
 
   return (
-    <Layout title="Les traces numériques">
+    <React.Fragment>
       <Notification
         text="✉️ BESOIN D’UN RAPPEL ?"
         path="/les-traces-numeriques/message"
       />
-      <Section>
-        <DictionaryCard to="/les-traces-numeriques/question/1">
-          <Text>
-            <span>
-              Commander en ligne, renseigner un formulaire, publier des photos,
-              partager son opinion sur un film, effectuer une recherche
-            </span>{" "}
-            : toute activité sur le web crée des traces.
-          </Text>
-          <Text>
-            Les informations ainsi collectées sont conservées et analysées.
-          </Text>
-        </DictionaryCard>
-      </Section>
-    </Layout>
+      <Layout title="Les traces numériques">
+        <Section>
+          <DictionaryCard to="/les-traces-numeriques/question/1">
+            <Text>
+              <span>
+                Commander en ligne, renseigner un formulaire, publier des
+                photos, partager son opinion sur un film, effectuer une
+                recherche
+              </span>{" "}
+              : toute activité sur le web crée des traces.
+            </Text>
+            <Text>
+              Les informations ainsi collectées sont conservées et analysées.
+            </Text>
+          </DictionaryCard>
+        </Section>
+      </Layout>
+    </React.Fragment>
   )
 }
 
